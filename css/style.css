@@ -35,6 +35,11 @@
     margin: 5px;
 }
 
+.malibuBtn {
+    background: #84a4fc;
+    color: rgb(255,255,255);
+}
+
 .purpleBtn {
     width: 171px;
     height: 36px;

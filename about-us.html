@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Каталог</title>
+    <title>FamilyStore</title>
     <!-- MDB icon -->
     <link rel="icon" href="img/logo_transparent.png" type="image/x-icon">
     <!-- Font Awesome -->
@@ -21,10 +21,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-<header>
+<div class="whatsappIcon">
+    <a href="https://wa.me/77079820199/" target="_blank" title="whatsapp icons">
+        <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
+    </a>
+</div>
+<header style="background: rgb(255,255,255)">
     <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg z-depth-1" style="height: 112px;">
-        <a class="navbar-brand ownMenuDark font-weight-bold" href="./index.html">
+    <nav class="mb-1 navbar navbar-expand-lg z-depth-0" style="height: 112px;">
+        <a class="navbar-brand ownMenu font-weight-bold" href="./index.html">
             <img src="/img/familyStore.pdf" width="112px" height="auto" alt="Main logo"/>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
@@ -33,22 +38,22 @@
                 <i class="fas fa-align-right topText"></i>
             </span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <div class="collapse navbar-collapse ownMenuDark" id="navbarSupportedContent-333">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item malibuBtn" style="border-radius: 32px;">
-                    <a class="nav-link ownMenu" href="#" onclick="slowScroll('#aboutUs')">Каталог</a>
+                    <a class="nav-link ownMenu" href="./catalog.html">Каталог</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ownMenuDark" href="#" onclick="slowScroll('#aboutUs')">Компания</a>
+                    <a class="nav-link ownMenuDark" href="#" onclick="slowScroll('#portfolio')">О нас</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ownMenuDark" href="#" onclick="slowScroll('#portfolio')">FAQ</a>
+                    <a class="nav-link ownMenuDark" href="#" onclick="slowScroll('#portfolio')">Стать партнером</a>
                 </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link ownMenu" href="#">Pricing</a>
-                </li>-->
                 <li class="nav-item">
-                    <a class="nav-link ownMenuDark" href="#" onclick="slowScroll('#contact')">Контакты</a>
+                    <a class="nav-link ownMenuDark" href="/questions.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ownMenuDark" href="./сontact.html">Контакты</a>
                 </li>
             </ul>
             <!--<ul class="navbar-nav ml-auto nav-flex-icons">
@@ -77,98 +82,158 @@
             </ul>-->
         </div>
     </nav>
+    <!--/.Navbar -->
 </header>
 <main>
-    <section id="aboutUs" class="py-5">
+    <section id="about-us">
         <div class="container px-5">
-            <h2 class="h1-responsive font-weight-bold my-5">Каталог</h2>
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_1.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+            <div class="card mt-5 mb-5" style="border-radius: 10px;">
+                <div class="card-body text-center">
+                    <img src="./img/familyStore.pdf" class="img-fluid" alt="">
+                </div>
+            </div>
+            <h2 class="h1-responsive font-weight-bold mt-5 mb-5">Кто мы?</h2>
+            <div class="row mt-5 mb-5">
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-5 mb-5">
+                    <div class="card" style="border-radius: 10px;">
                         <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                            <img src="./img/familyStore.pdf" class="img-fluid" alt=""/>
                         </div>
                     </div>
                 </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_2.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
-                        </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-5 mb-5">
+                    <h2>Компания Family store </h2>
+                    Компания Family store была создана в 2018 году и специализируется на школьные рюкзаки и игрушки,
+                    который включает в себя несколько совершенно разноплановых коллекций.  Сегодня Family store
+                    - один из самых узнаваемых брендов в сегменте детских товаров.
+                    <div class="mt-4">
+                        ГЛАВНАЯ МИССИЯ <b>Family store</b> <br>
+                        ПРЕВРАЩАЕМ ЗАБОТУ О ДЕТЯХ В УДОВОЛЬСТВИЕ!
                     </div>
                 </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_3.jpeg" class="card-img-top" alt="Palm Springs Road"/>
+            </div>
+            <div class="row mt-5 mb-5">
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-5 mb-5">
+                    <h2>«Мы находимся</h2>
+                     на пороге новой игры с новыми правилами, которые изменят все подходы к ведению бизнеса
+                    в отрасли!» К 2024 году в нашу общую игру будут играть 1 000 000 человек по всему Казахстану.
+                    Вот цель развития «Family store». 
+
+                    <div class="mt-4">
+                        <strong>Шылманбетов Нурлыбек</strong> <br>
+                        Основатель <b>Family store</b>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-5 mb-5">
+                    <div class="card" style="border-radius: 10px;">
                         <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                            <img src="./img/familyStore.pdf" class="img-fluid" alt=""/>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_4.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+            <div>
+                <div class="text-center">
+                    <h2 class="h1-responsive font-weight-bold mt-5 mb-5">Кто мы?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="card  ">
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Jon Snow</h5>
+                                <p class="card-text">
+                                    King in the North
+                                </p>
+
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_5.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="card  ">
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Jon Snow</h5>
+                                <p class="card-text">
+                                    King in the North
+                                </p>
+
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_6.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="card  ">
+                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Jon Snow</h5>
+                                <p class="card-text">
+                                    King in the North
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_7.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
-                        </div>
+            <div class="mt-5 mb-5">
+                <div class="card mt-5 mb-5">
+                    <div class="card-body">
+                        <h2>Как осуществляется поставка заказа?</h2>
+                        <p>
+                            Доставка по регионам -  осуществляется после оплати на адрес указанный во время оформления заказа. Доставка осуществляется за счет клиента.
+                            Доставка по Алматы -  осуществляется после оплати на адрес указанный во время оформления заказа. Доставка бесплатно от 30,000 тенге
+                        </p>
                     </div>
                 </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_8.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
-                        </div>
+                <div class="card mt-5 mb-5">
+                    <div class="card-body">
+                        <h2>Возможна ли отмена заказа?</h2>
+                        <p>
+                            Заказ можно отменить предварительно связавшись с Вашим менеджером до момента отправки товара с нашего склада.
+                        </p>
                     </div>
                 </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_9.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
-                        </div>
+                <div class="card mt-5 mb-5">
+                    <div class="card-body">
+                        <h2>Как сделать первый заказ?</h2>
+                        <p>
+                            Для того чтобы сделать первый заказ оставьте заявку на сайте или свяжитесь с ответственным
+                            за Ваш регион менеджером. Для оформления договора сотрудничества и подтверждения заказа
+                            потребуется стандартный пакет документов. Для физического (ИП) или юридического лица (ООО)
+                            и банковские реквизиты (расчетный счет)
+                        </p>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 </main>
 <!-- Footer -->
 <footer class="page-footer font-small bg-white">
     <!--contact-->
-    <section id="catalog" class="py-5">
+    <section id="contact" class="py-5">
         <div class="container px-5" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
             <!--form-->
             <div class="card cardForm">
@@ -227,7 +292,7 @@
                     <a class="nav__item" href="#">Каталог</a>
                 </li>
                 <li>
-                    <a class="nav__item" href="./about-us.html">О нас</a>
+                    <a class="nav__item" href="#">О нас</a>
                 </li>
                 <li>
                     <a class="nav__item" href="#">Бренды</a>
@@ -296,6 +361,9 @@
 <script src="js/script.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript">
+    AOS.init({
+        duration: 1200,
+    })
     new WOW().init();
 
     /*slowScroll*/
@@ -316,24 +384,6 @@
     gtag('js', new Date());
 
     gtag('config', 'G-0JFB0WXMJS');
-</script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (m, e, t, r, i, k, a) {
-        m[i] = m[i] || function () {
-            (m[i].a = m[i].a || []).push(arguments)
-        };
-        m[i].l = 1 * new Date();
-        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-    })
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(64824181, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true
-    });
 </script>
 <noscript>
     <div><img src="https://mc.yandex.ru/watch/64824181" style="position:absolute; left:-9999px;" alt=""/></div>
