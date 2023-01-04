@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>FamilyStore – Контакты</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/logo_transparent.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!--AoS animate-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<div class="whatsappIcon">
+  <a href="https://wa.me/77079820199/" target="_blank" title="whatsapp icons">
+    <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
+  </a>
+</div>
+<header style="background: #84a4fc; height: 100vh;">
+  <!--Navbar -->
+  <nav class="mb-1 navbar navbar-expand-lg z-depth-0" style="height: 112px;">
+    <a class="navbar-brand ownMenu font-weight-bold" href="./index.html">
+      <img src="/img/familyStore.pdf" width="112px" height="auto" alt="Main logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-align-right topText"></i>
+            </span>
+    </button>
+    <div class="collapse navbar-collapse ownMenu" id="navbarSupportedContent-333">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" style="border-radius: 32px; background: rgb(255,255,255);">
+          <a class="nav-link ownMenu" href="./catalog.html" style="color: #84a4fc;">Каталог</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ownMenu" href="#" onclick="slowScroll('#portfolio')">О нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ownMenu" href="#" onclick="slowScroll('#portfolio')">Стать партнером</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ownMenu" href="#" onclick="slowScroll('#portfolio')">FAQ</a>
+        </li>
+        <!--<li class="nav-item">
+            <a class="nav-link ownMenu" href="#">Pricing</a>
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link ownMenu" href="#" onclick="slowScroll('#contact')">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--/.Navbar -->
+  <section id="mainPage" class="view intro">
+    <div class="container-fluid mx-lg-5 mx-md-5">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div>
+            <div class="mb-5">
+              <div class="contactLabel">
+                E-mail
+              </div>
+              <div class="contactSrc">
+                familystore@gmail.com
+              </div>
+            </div>
+            <div class="mb-5">
+              <div class="contactLabel">
+                Телефон:
+              </div>
+              <div class="contactSrc">
+                +7 707 982 01-99
+              </div>
+            </div>
+            <div class="mb-5">
+              <div class="contactLabel">
+                Адрес:
+              </div>
+              <div class="contactSrc">
+                г.Алматы, 050000, ул.Абая 88
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="container px-5" style="max-width: 660px;margin-left: auto;margin-right: auto;">
+            <!--form-->
+            <div class="card cardForm">
+              <div class="card-body">
+                <form>
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="formHeading">
+                    Свяжитесь с нами
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <div class="form-outline">
+                        <label class="form-label" for="form6Example1">Имя</label>
+                        <input type="text" id="form6Example1" class="form-control" placeholder="Арсен Сарсенович"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- Text input -->
+                      <div class="form-outline">
+                        <label class="form-label" for="form6Example3">Компания</label>
+                        <input type="text" id="form6Example3" class="form-control" placeholder="Эпл"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <div class="form-outline">
+                        <label class="form-label" for="phoneNumber">Номер телефона</label>
+                        <input type="number" id="phoneNumber" class="form-control" placeholder="+7 707 982 01-99" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- Text input -->
+                      <div class="form-outline">
+                        <label class="form-label" for="emailAddress">E-mail</label>
+                        <input type="email" id="emailAddress" class="form-control" placeholder="example@mail.com"/>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Message input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form6Example7">Текст</label>
+                    <textarea class="form-control" id="form6Example7" rows="4" placeholder="Добрый день!"></textarea>
+                  </div>
+
+                  <!-- Submit button -->
+                  <div class="text-center">
+                    <button type="submit" class="primary-btn mb-4">Отправить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!--/form-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!--AoS animate-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-0JFB0WXMJS"></script>-->
+<script src="js/script.js"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript">
+  AOS.init({
+    duration: 1200,
+  })
+  new WOW().init();
+
+  /*slowScroll*/
+  function slowScroll(id) {
+    var offset = 0;
+    $('html,body').animate({
+      scrollTop: $(id).offset().top - offset
+    }, 500);
+    return false;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-0JFB0WXMJS');
+</script>
+<noscript>
+  <div><img src="https://mc.yandex.ru/watch/64824181" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
