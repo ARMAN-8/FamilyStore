@@ -36,7 +36,7 @@
 }
 
 .malibuBtn {
-    background: #84a4fc;
+    background: #027DFA;
     color: rgb(255,255,255);
 }
 
@@ -44,7 +44,7 @@
     width: 171px;
     height: 36px;
     color: rgb(255,255,255);
-    background: #84a4fc;
+    background: #027DFA;
     border-radius: 32px;
 }
 
@@ -70,7 +70,7 @@ marquee {
     margin: 0 auto;
     max-width: 400px;
     height: 229px;
-    padding-top: 300px;
+
     display: flex;
 }
 
@@ -146,7 +146,7 @@ marquee {
 .primary-btn {
     border-radius: 32px;
     border: 1px transparent;
-    background-color: #84a4fc;
+    background-color: #027DFA;
     color: rgb(255,255,255);
     align-items: center;
     justify-content: center;
@@ -172,7 +172,7 @@ marquee {
     line-height: 133%;
     letter-spacing: .08em;
     text-transform: uppercase;
-    color: #84a4fc;
+    color: #027DFA;
     margin-bottom: 16px;
 }
 
@@ -188,18 +188,19 @@ marquee {
     z-index: 10;
 }
 
-.carouselNext {
+/*.carouselNext {
     width: 68px;
     height: 68px;
     border-radius: 100px;
-    transition: all .5s ease;
     cursor: pointer;
     font-size: 0;
-    color: red!important;
     background: rgb(255,255,255)!important;
     box-shadow: 3px 4px 24px -1px rgba(97,13,161,.1);
     transition: all .7s ease;
-    cursor: pointer;
+}
+
+.carouselNext i {
+    background: red;
 }
 
 .carouselPrev {
@@ -212,7 +213,7 @@ marquee {
     background: #ffffff!important;
     box-shadow: none;
     cursor: pointer;
-}
+}*/
 
 .contactLabel {
     font-style: normal;
