@@ -1,3 +1,32 @@
+html body {
+    font-family: Stratos, sans-serif;
+}
+
+.nav-link {
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+
+.mainPageTitle {
+    font-size: 96px;
+    font-weight: 700;
+    height: 200px;
+    letter-spacing: 1.1px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.05;
+    opacity: 0;
+    transform: translate3d(0,50px,1px);
+    transition: opacity .5s ease,transform .5s ease;
+}
+
 .bor_r_15{
     border-radius: 15px;
 }
@@ -126,6 +155,11 @@ marquee {
 .nav__item:hover {
     color: rgb(188, 188, 188);
 }
+
+/*.footer {
+    position: absolute;
+    color: rgb(255,255,255);
+}*/
 
 .underFooter {
     font-style: normal;
@@ -312,7 +346,7 @@ marquee {
 }
 /*/news*/
 
-.marquee {
+/*.marquee {
     height: 50px;
     overflow: hidden;
     position: relative;
@@ -372,16 +406,22 @@ marquee {
     }
 }
 
-/**/
+!**!
 
 .marquee div {
     position: absolute;
-    font-size: 12rem;
-    font-weight: 900;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 104%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #1f1f1f;
+
     width: 100%;
     height: 100%;
     margin: 0;
-    line-height: 50px;
     text-align: center;
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
@@ -420,4 +460,225 @@ marquee {
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
     }
+}*/
+
+
+
+
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+    overflow: hidden; /* HIDE SCROLL BAR */
 }
+
+/* (B) MOVING TICKER WRAPPER */
+.hmove { display: flex; }
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 104%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #1f1f1f;
+}
+
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+
+@-webkit-keyframes tickerh {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-400%, 0, 0); }
+}
+
+@keyframes tickerh {
+    0% { transform: translate3d(0, 0, 0); }
+    0% { transform: translate3d(-400%, 0, 0); }
+}
+.hmove { animation: tickerh linear 25s infinite; }
+/*.hmove:hover { animation-play-state: paused; }*/
+
+
+
+/* (A) FIXED WRAPPER */
+.hwrap2 {
+    overflow: hidden; /* HIDE SCROLL BAR */
+}
+
+/* (B) MOVING TICKER WRAPPER */
+.hmove2 { display: flex; }
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem2 {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 104%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #1f1f1f;
+}
+
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@-webkit-keyframes tickerh2 {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-400%, 0, 0); }
+}
+@keyframes tickerh2 {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-400%, 0, 0); }
+}
+.hmove2 { animation: tickerh2 linear 25s infinite; }
+/*
+.hmove:hover { animation-play-state: paused; }ver { animation-play-state: paused; }*/
+
+
+/*
+tabs*/
+.tabs {
+    display: flex;
+    padding: 1rem 1rem 0;
+    width: 100%;
+    border-bottom: solid 0.1rem rgb(255 255 255 / 70%);
+}
+
+.tabs>.nav {
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.75rem 0.1rem 0;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    background-color: transparent;
+    backdrop-filter: blur(13px);
+    z-index: 20;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 146%;
+    letter-spacing: .02em;
+}
+
+.tabs>.nav:hover {
+    cursor: pointer;
+    color: #027DFA;
+    transform: scale(1.1);
+    margin-top: -0.3rem;
+    padding-top: 0.75rem;
+    z-index: 30;
+}
+
+:has(#tab-1:checked) [for="tab-1"],
+:has(#tab-2:checked) [for="tab-2"],
+:has(#tab-3:checked) [for="tab-3"] {
+    cursor: pointer;
+    border: 2px solid #027DFA;
+    border-radius: 50px;
+    color: #027DFA;
+    transform: scale(1.1);
+    margin-top: -0.3rem;
+    padding-top: 0.75rem;
+    z-index: 30;
+}
+
+
+.content {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 3rem);
+    padding: 0.5rem;
+    background-color: rgb(255 255 255 / 40%);
+    backdrop-filter: blur(13px);
+    z-index: 10;
+}
+
+.content>section {
+    display: none;
+    flex-direction: column;
+}
+
+.content>section>p {
+    padding: 0 0.5rem;
+}
+
+.content>section>p+p {
+    margin: 0.25rem 0;
+}
+
+.content:has([id="tab-1"]:checked)>section:nth-child(1),
+.content:has([id="tab-2"]:checked)>section:nth-child(2),
+.content:has([id="tab-3"]:checked)>section:nth-child(3) {
+    display: flex;
+}
+
+.reviewsCard {
+    margin: 0 auto 42px;
+}
+
+.aboutUsCarouselTitle {
+    font-style: normal;
+    font-weight: 400;
+    color: #1f1f1f;
+    font-family: Stratos;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.aboutUsCarouselSubTitle {
+    font-family: OpenSans;
+    font-size: 18px;
+    letter-spacing: .01em;
+    padding-bottom: 70px;
+    font-style: normal;
+    font-weight: 400;
+    color: #1f1f1f;
+}
+
+.auCollapseTitle {
+    font-family: Stratos;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #1f1f1f;
+}
+
+.auCollapseTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.auCollapseSubTitle {
+    margin-top: 5%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: .02em;
+    color: #1f1f1f;
+}
+

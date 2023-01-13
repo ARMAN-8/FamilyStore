@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>FamilyStore</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/logo_transparent.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!--AoS animate-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--WoW, and animate.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+<div class="whatsappIcon">
+  <a href="https://wa.me/77478105950/" target="_blank" title="whatsapp icons">
+    <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
+  </a>
+</div>
+<header>
+  <!--Navbar -->
+  <nav class="mb-1 navbar navbar-expand-lg z-depth-0 navbar-light" style="height: 112px;">
+    <a class="navbar-brand ownMenu font-weight-bold" href="./index.html">
+      <img src="/img/familyStore.pdf" width="130px" height="auto" alt="Main logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fas fa-align-right topText"></i>
+            </span>
+    </button>
+    <div class="collapse navbar-collapse ownMenu" id="navbarSupportedContent-333">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item malibuBtn" style="border-radius: 32px;">
+          <a class="nav-link ownMenu" href="./catalog.html">Каталог</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ownMenu" href="./about-us.html">О нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ownMenu" href="#" onclick="slowScroll('#contact')">Стать партнером</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ownMenu" href="/questions.html">FAQ</a>
+        </li>
+        <!--<li class="nav-item">
+            <a class="nav-link ownMenu" href="#">Pricing</a>
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link ownMenu" href="./сontact.html">Контакты</a>
+        </li>
+      </ul>
+      <!--<ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item">
+              <a class="nav-link waves-effect waves-light topText" href="https://www.instagram.com/degdarr/"
+                 target="_blank" title="Instagram">
+                  <i class="fab fa-instagram"></i>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link waves-effect waves-light topText" href="" target="_blank" title="Telegram">
+                  <i class="fas fa-paper-plane"></i>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link waves-effect waves-light topText" target="_blank" title="Whatsapp"
+                 href="https://wa.me/+77079820199?text=Қайырлы+күн%2C+менің+қояр+сұрағым+">
+                  <i class="fab fa-whatsapp"></i>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link waves-effect waves-light topText" href="tel:+77079820199">
+                  <i class="fas fa-phone green-text animated pulse infinite mr-3"></i>
+              </a>
+          </li>
+      </ul>-->
+    </div>
+  </nav>
+  <!--/.Navbar -->
+</header>
+<main>
+  <section id="aboutUs" class="py-5">
+    <div class="container-fluid px-5">
+      <div class="d-flex">
+        <div class="card reviewsCard pb-2" style="border-radius: 50px;">
+          <nav class="tabs">
+            <label class="nav tabsLabel" for="tab-1">Новости</label>
+            <label class="nav tabsLabel" for="tab-2">Акция</label>
+            <label class="nav tabsLabel" for="tab-3">Обзоры</label>
+          </nav>
+        </div>
+      </div>
+      <article class="content">
+        <section>
+          <p>Tabs are a great way to organize and navigate content on a webpage. They allow you to display multiple sections of content in a compact space, and let users switch between them with a click.</p><p>
+          Traditionally, tabs have been implemented using JavaScript, but it is possible to create tabs using only HTML and CSS. This can be especially useful for beginning web developers who are not yet comfortable with JavaScript, or for those who want to create a simple tabbed interface without the added complexity of JavaScript.</p>
+        </section>
+        <section>
+          <p>If you want to learn to program better or if you would like to learn a new language use the free application <a href="https://sololearn.onelink.me/MfgO/9xpc60iz">Sololearn</a>, this is also incredibly fun to do and you will learn the language you want to learn! Definitely worth a try.</p>
+        </section>
+        <section>
+          content 3
+        </section>
+        <input type="radio" name="tabs" id="tab-1" hidden checked />
+        <input type="radio" name="tabs" id="tab-2" hidden />
+        <input type="radio" name="tabs" id="tab-3" hidden />
+      </article>
+
+    </div>
+  </section>
+</main>
+<!-- Footer -->
+<div class="page-footer font-small bg-white">
+  <!--contact-->
+  <section id="contact" class="py-5">
+    <div class="container px-5" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
+      <!--form-->
+      <div class="card cardForm">
+        <div class="card-body">
+          <form>
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="formHeading">
+              Свяжитесь с нами
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form6Example1">Имя</label>
+                  <input type="text" id="form6Example1" class="form-control" placeholder="Арсен Сарсенович"/>
+                </div>
+              </div>
+              <div class="col">
+                <!-- Text input -->
+                <div class="form-outline">
+                  <label class="form-label" for="form6Example3">Компания</label>
+                  <input type="text" id="form6Example3" class="form-control" placeholder="Антошка"/>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="phoneNumber">Номер телефона</label>
+                  <input type="number" id="phoneNumber" class="form-control" placeholder="+7 747 810 59-50"/>
+                </div>
+              </div>
+              <div class="col">
+                <!-- Text input -->
+                <div class="form-outline">
+                  <label class="form-label" for="emailAddress">E-mail</label>
+                  <input type="email" id="emailAddress" class="form-control" placeholder="info@familystore.kz"/>
+                </div>
+              </div>
+            </div>
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example7">Сообщение</label>
+              <textarea class="form-control" id="form6Example7" rows="4" placeholder="Добрый день!"></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <div class="text-center">
+              <button type="submit" class="primary-btn mb-4">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--/form-->
+      <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3" style="list-style: none; background: red;">
+        <li>
+          <a class="nav__item" href="./catalog.html">Каталог</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./about-us.html">О нас</a>
+        </li>
+        <li>
+          <a class="nav__item" href="#">Бренды</a>
+        </li>
+        <li>
+          <a class="nav__item" href="#">FAQ</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./сontact.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!--/contact-->
+  <div style="background: url('./img/footer.svg'); height: 545px;">
+    <div class="animation_social_media" style="padding-top: 300px;">
+      <a href="https://www.youtube.com/"
+         target="_blank" rel="nofollow" class="social-blob bottom__blob social-blob_1 bottom__blob_1 m-2"
+         data-v-6c466415="" data-v-1dfc1ef0="">
+                <span class="social-blob__wrapper" data-v-6c466415="">
+                    <img alt="Social link" data-v-6c466415="" class="lazyLoad isLoaded" src="./img/icons/youtube.svg"/>
+                </span>
+      </a>
+      <a href="https://www.youtube.com/"
+         target="_blank" rel="nofollow" class="social-blob bottom__blob social-blob_1 bottom__blob_1 m-2"
+         data-v-6c466415="" data-v-1dfc1ef0="">
+                <span class="social-blob__wrapper" data-v-6c466415="">
+                    <img alt="Social link" data-v-6c466415="" class="lazyLoad isLoaded" src="./img/icons/facebook.svg"/>
+                </span>
+      </a>
+      <a href="https://www.youtube.com/"
+         target="_blank" rel="nofollow" class="social-blob bottom__blob social-blob_1 bottom__blob_1 m-2"
+         data-v-6c466415="" data-v-1dfc1ef0="">
+                <span class="social-blob__wrapper" data-v-6c466415="">
+                    <img alt="Social link" data-v-6c466415="" class="lazyLoad isLoaded" src="./img/icons/instagram.png.svg"/>
+                </span>
+      </a>
+    </div>
+    <!--<div class="container-fluid footerCopyright">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 underFooter">
+                © 2023 Copyright:
+                Family store. Все права защищены
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <a href="#" class="underFooter">Crazy about toys</a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <a href="#" class="underFooter">Terms and conditions</a>
+            </div>
+        </div>
+    </div>-->
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!--AoS animate-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-0JFB0WXMJS"></script>-->
+<script src="js/script.js"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript">
+  AOS.init({
+    duration: 1200,
+  })
+  new WOW().init();
+
+  /*slowScroll*/
+  function slowScroll(id) {
+    var offset = 0;
+    $('html,body').animate({
+      scrollTop: $(id).offset().top - offset
+    }, 500);
+    return false;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-0JFB0WXMJS');
+</script>
+<noscript>
+  <div><img src="https://mc.yandex.ru/watch/64824181" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
