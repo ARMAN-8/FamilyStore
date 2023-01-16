@@ -1,2 +1,1 @@
-# DEGDARR
-Основной сайт Degdar
+# Family store
