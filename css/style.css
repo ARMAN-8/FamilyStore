@@ -380,11 +380,19 @@ marquee {
 }
 
 /*news*/
+#news {
+    background-image: url("../img/news.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 175vh;
+}
+
 .newsImg {
     border-radius: 8px;
 }
 
 .newsTitle {
+    color: #0d0d0d;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
