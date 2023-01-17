@@ -282,6 +282,10 @@ marquee {
     margin-bottom: 16px;
 }
 
+.nav__item {
+    cursor: pointer;
+}
+
 .whatsappIcon {
     width: 48px;
     height: 48px;
