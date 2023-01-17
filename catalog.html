@@ -19,13 +19,59 @@
     <link rel="stylesheet" href="css/style.css">
     <!--AoS animate-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .container {
+            overflow: hidden;
+        }
+
+        .filterDiv {
+            display: none; /* Hidden by default */
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+            display: block;
+        }
+
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        /* Add a light grey background on mouse-over */
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        /* Add a dark background to the active button */
+        .btn.active {
+            background-color: #027DFA;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .catalogCardTitle {
+            color: #0d0d0d;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 139.5%;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
 <header>
     <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg z-depth-1" style="height: 112px;">
-        <a class="navbar-brand ownMenuDark font-weight-bold" href="./index.html">
-            <img src="/img/familyStore.pdf" width="112px" height="auto" alt="Main logo"/>
+    <nav class="mb-1 navbar navbar-expand-lg z-depth-0 mx-lg-4" style="height: 112px;">
+        <a class="navbar-brand ownMenu font-weight-bold" href="./index.html">
+            <img src="/img/newLogo.pdf" width="130px" height="auto" alt="Main logo"/>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
                 aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,22 +79,30 @@
                 <i class="fas fa-align-right topText"></i>
             </span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <div class="collapse navbar-collapse ownMenu" id="navbarSupportedContent-333">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item malibuBtn" style="border-radius: 32px;">
-                    <a class="nav-link ownMenu" href="#" onclick="slowScroll('#aboutUs')">Каталог</a>
+                <li class="nav-item malibuBtn mx-lg-5" style="border-radius: 32px;">
+                    <a class="nav-link ownMenu" href="./catalog.html"><b>Каталог</b></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link ownMenuDark" href="#" onclick="slowScroll('#aboutUs')">Компания</a>
+                <li class="nav-item mx-lg-2">
+                    <a class="nav-link  ownMenuDark" href="./about-us.html"><b>О нас</b></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link ownMenuDark" href="#" onclick="slowScroll('#portfolio')">FAQ</a>
+                <li class="nav-item mx-lg-2">
+                    <a class="nav-link  ownMenuDark" href="#" onclick="slowScroll('#contact')"><b>Стать партнером</b></a>
+                </li>
+                <li class="nav-item mx-lg-2">
+                    <a class="nav-link  ownMenuDark" href="/questions.html"><b>Вопросы</b></a>
                 </li>
                 <!--<li class="nav-item">
                     <a class="nav-link ownMenu" href="#">Pricing</a>
                 </li>-->
-                <li class="nav-item">
-                    <a class="nav-link ownMenuDark" href="#" onclick="slowScroll('#contact')">Контакты</a>
+                <li class="nav-item mx-lg-2">
+                    <a class="nav-link  ownMenuDark" href="./сontact.html"><b>Контакты</b></a>
+                </li>
+                <li class="nav-item mx-lg-2">
+                    <a class="nav-link ownMenu" href="tel:+77478105950">
+                        <i class="fas fa-phone text-success"></i>
+                    </a>
                 </li>
             </ul>
             <!--<ul class="navbar-nav ml-auto nav-flex-icons">
@@ -79,209 +133,365 @@
     </nav>
 </header>
 <main>
-    <section id="aboutUs" class="py-5">
-        <div class="container px-5">
+    <section id="aboutUs" class="py-5" style="background: url('./img/catalog.png') no-repeat;">
+        <div class="container-fluid px-5">
             <h2 class="h1-responsive font-weight-bold my-5">Каталог</h2>
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_1.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
-                        </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12">
+                    <!-- Control buttons -->
+                    <div id="myBtnContainer">
+                        <button class="btn active" onclick="filterSelection('all')">Показать все</button>
+                        <hr>
+                        <button class="btn" onclick="filterSelection('animals')"> Школьные рюкзаки на колесиках</button>
+                        <button class="btn" onclick="filterSelection('fruits')">Школьные рюкзаки и ранцы</button>
+                        <button class="btn" onclick="filterSelection('colors')"> Детские рюкзаки</button>
+                        <button class="btn" onclick="filterSelection('cars')">Мягкие игрушки</button>
                     </div>
                 </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_2.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_3.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div class="col-lg-9 col-md-12 col-sm-12">
 
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_4.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                    <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+                    <div class="container">
+                        <div class="row my-2">
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv cars card bor_r_15 flash">
+                                        <img src="./img/toys/toy_1.jpeg" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="justify-content-around">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv cars card bor_r_15 flash">
+                                        <img src="./img/toys/toy_2.jpeg" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv cars card bor_r_15 flash">
+                                        <img src="./img/toys/toy_3.jpeg" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv cars card bor_r_15 flash">
+                                        <img src="./img/toys/toy_4.jpeg" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv cars card bor_r_15 flash">
+                                        <img src="./img/toys/toy_5.jpeg" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv cars card bor_r_15 flash">
+                                        <img src="./img/toys/toy_6.jpeg" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_5.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                        <div class="row my-2">
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv fruits card bor_r_15 flash">
+                                        <img src="https://cdn.pixabay.com/photo/2020/02/25/06/41/school-bag-4878120_1280.png" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Школьный рюкзак</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv fruits card bor_r_15 flash">
+                                        <img src="https://cdn.pixabay.com/photo/2020/02/25/06/41/school-bag-4878120_1280.png" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Школьный рюкзак</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv fruits card bor_r_15 flash">
+                                        <img src="https://cdn.pixabay.com/photo/2020/02/25/06/41/school-bag-4878120_1280.png" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Школьный рюкзак</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_6.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                        <div class="row my-2">
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv colors card bor_r_15 flash">
+                                        <img src="https://www.clipartmax.com/png/full/149-1492989_school-bag-transparent-images-school-bags-png.png" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Детские рюкзаки</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv colors card bor_r_15 flash">
+                                        <img src="https://www.clipartmax.com/png/full/149-1492989_school-bag-transparent-images-school-bags-png.png" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Детские рюкзаки</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv colors card bor_r_15 flash">
+                                        <img src="https://www.clipartmax.com/png/full/149-1492989_school-bag-transparent-images-school-bags-png.png" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Детские рюкзаки</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+                        <div class="row my-2">
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv animals card bor_r_15 flash">
+                                        <img src="https://sc04.alicdn.com/kf/Hcff9482b0cef4c70868f98d24a49705cm.jpg" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Школьные рюкзаки на колесиках</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv animals card bor_r_15 flash">
+                                        <img src="https://sc04.alicdn.com/kf/Hcff9482b0cef4c70868f98d24a49705cm.jpg" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Школьные рюкзаки на колесиках</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+                                <a href="#" class="">
+                                    <div class="filterDiv animals card bor_r_15 flash">
+                                        <img src="https://sc04.alicdn.com/kf/Hcff9482b0cef4c70868f98d24a49705cm.jpg" class="card-img-top img-fluid picture" alt="Hollywood Sign on The Hill"/>
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <a href="https://kaspi.kz/" target="_blank"><span class="badge badge-danger bor_r_15 px-2">В розницу | Kaspi</span></a>
+                                                <a href="tel:+77478105950" target="_blank"><span class="badge badge-primary bor_r_15 px-2">Оптом | Контакты</span></a>
+                                            </div>
+                                            <hr>
+                                            <h5 class="catalogCardTitle">Школьные рюкзаки на колесиках</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--<div class="filterDiv colors fruits">Orange</div>
+                        <div class="filterDiv colors">Red</div>
+                        <div class="filterDiv cars animals">Mustang</div>
+                        <div class="filterDiv colors">Blue</div>
+                        <div class="filterDiv animals">Cat</div>
+                        <div class="filterDiv animals">Dog</div>
+                        <div class="filterDiv fruits">Melon</div>
+                        <div class="filterDiv fruits animals">Kiwi</div>
+                        <div class="filterDiv fruits">Banana</div>
+                        <div class="filterDiv fruits">Lemon</div>
+                        <div class="filterDiv animals">Cow</div>-->
                     </div>
-                </div>
-            </div>
 
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_7.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                    <!--<div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_1.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_2.jpeg" class="card-img-top" alt="Palm Springs Road"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_3.jpeg" class="card-img-top" alt="Palm Springs Road"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_3.jpeg" class="card-img-top" alt="Palm Springs Road"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <!--<div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_4.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_5.jpeg" class="card-img-top" alt="Palm Springs Road"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_6.jpeg" class="card-img-top" alt="Palm Springs Road"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_8.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_7.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <img src="./img/toys/toy_9.jpeg" class="card-img-top" alt="Palm Springs Road"/>
-                        <div class="card-body">
-                            <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_8.jpeg" class="card-img-top" alt="Palm Springs Road"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="col p-2">
+                            <div class="card h-100">
+                                <img src="./img/toys/toy_9.jpeg" class="card-img-top" alt="Palm Springs Road"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Мягкая игрушка TY BEANIE Bellias Выдра Mitch (40925)</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
                 </div>
             </div>
         </div>
     </section>
 </main>
-<!-- Footer -->
-<footer class="page-footer font-small bg-white">
-    <!--contact-->
-    <section id="catalog" class="py-5">
-        <div class="container px-5" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
-            <!--form-->
-            <div class="card cardForm">
-                <div class="card-body">
-                    <form>
-                        <!-- 2 column grid layout with text inputs for the first and last names -->
-                        <div class="formHeading">
-                            Свяжитесь с нами
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col">
-                                <div class="form-outline">
-                                    <label class="form-label" for="form6Example1">Имя</label>
-                                    <input type="text" id="form6Example1" class="form-control" placeholder="Арсен Сарсенович"/>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <!-- Text input -->
-                                <div class="form-outline">
-                                    <label class="form-label" for="form6Example3">Компания</label>
-                                    <input type="text" id="form6Example3" class="form-control" placeholder="Эпл"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col">
-                                <div class="form-outline">
-                                    <label class="form-label" for="phoneNumber">Номер телефона</label>
-                                    <input type="number" id="phoneNumber" class="form-control" placeholder="+7 707 982 01-99" />
-                                </div>
-                            </div>
-                            <div class="col">
-                                <!-- Text input -->
-                                <div class="form-outline">
-                                    <label class="form-label" for="emailAddress">E-mail</label>
-                                    <input type="email" id="emailAddress" class="form-control" placeholder="info@familystore.kz"/>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Message input -->
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="form6Example7">Текст</label>
-                            <textarea class="form-control" id="form6Example7" rows="4" placeholder="Добрый день!"></textarea>
-                        </div>
 
-                        <!-- Submit button -->
-                        <div class="text-center">
-                            <button type="submit" class="primary-btn mb-4">Отправить</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!--/form-->
-            <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3" style="list-style: none; background: red;">
-                <li>
-                    <a class="nav__item" href="./catalog.html">Каталог</a>
-                </li>
-                <li>
-                    <a class="nav__item" href="./about-us.html">О нас</a>
-                </li>
-                <li>
-                    <a class="nav__item" href="#">Бренды</a>
-                </li>
-                <li>
-                    <a class="nav__item" href="#">FAQ</a>
-                </li>
-                <li>
-                    <a class="nav__item" href="./сontact.html">Контакты</a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--/contact-->
-    <div style="background: url('./img/footer.svg'); height: 545px;">
-        <div class="animation_social_media" style="padding-top: 300px;">
-            <a href="https://www.youtube.com/"
-               target="_blank" rel="nofollow" class="social-blob bottom__blob social-blob_1 bottom__blob_1 m-2"
-               data-v-6c466415="" data-v-1dfc1ef0="">
-                <span class="social-blob__wrapper" data-v-6c466415="">
-                    <img alt="Social link" data-v-6c466415="" class="lazyLoad isLoaded" src="./img/icons/youtube.svg"/>
-                </span>
-            </a>
-            <a href="https://www.youtube.com/"
-               target="_blank" rel="nofollow" class="social-blob bottom__blob social-blob_1 bottom__blob_1 m-2"
-               data-v-6c466415="" data-v-1dfc1ef0="">
-                <span class="social-blob__wrapper" data-v-6c466415="">
-                    <img alt="Social link" data-v-6c466415="" class="lazyLoad isLoaded" src="./img/icons/facebook.svg"/>
-                </span>
-            </a>
-            <a href="https://www.youtube.com/"
-               target="_blank" rel="nofollow" class="social-blob bottom__blob social-blob_1 bottom__blob_1 m-2"
-               data-v-6c466415="" data-v-1dfc1ef0="">
-                <span class="social-blob__wrapper" data-v-6c466415="">
-                    <img alt="Social link" data-v-6c466415="" class="lazyLoad isLoaded" src="./img/icons/instagram.png.svg"/>
-                </span>
-            </a>
-        </div>
-        <!--<div class="container-fluid footerCopyright">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 underFooter">
-                    © 2023 Copyright:
-                    Family store. Все права защищены
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <a href="#" class="underFooter">Crazy about toys</a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <a href="#" class="underFooter">Terms and conditions</a>
-                </div>
-            </div>
-        </div>-->
-    </div>
-</footer>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="js/popper.min.js"></script>
