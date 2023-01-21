@@ -30,7 +30,7 @@
     <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg z-depth-0" style="height: 112px;">
         <a class="navbar-brand ownMenu font-weight-bold" href="./index.html">
-            <img src="/img/familyStore.pdf" width="112px" height="auto" alt="Main logo"/>
+            <img src="/img/newLogo.pdf" width="112px" height="auto" alt="Main logo"/>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
                 aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,17 +87,17 @@
 <main>
     <section id="about-us">
         <div class="container-fluid px-5">
-            <div class="card mt-5 mb-5" style="border-radius: 10px; height: 75vh;">
+            <div class="card mt-5 mb-5" style="border-radius: 10px;">
                 <div class="card-body text-center">
-                    <img src="./img/familyStore.pdf" class="img-fluid" alt="">
+                    <img src="./img/newLogo.pdf" class="img-fluid" alt="">
                 </div>
             </div>
             <h2 class="h1-responsive font-weight-bold mt-5 mb-5">Кто мы?</h2>
             <div class="row mt-5 mb-5">
                 <div class="col-lg-6 col-md-6 col-sm-12 mt-5 mb-5">
                     <div class="card" style="border-radius: 10px;">
-                        <div class="card-body">
-                            <img src="./img/familyStore.pdf" class="img-fluid" alt=""/>
+                        <div class="card-body text-center">
+                            <img src="./img/newLogo.pdf" class="img-fluid" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -126,8 +126,8 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 mt-5 mb-5">
                     <div class="card" style="border-radius: 10px;">
-                        <div class="card-body">
-                            <img src="./img/familyStore.pdf" class="img-fluid" alt=""/>
+                        <div class="card-body text-center">
+                            <img src="./img/newLogo.pdf" class="img-fluid" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                                         <div class="row">
 
                                             <div class="col-md-6 mb-3">
-                                                <img class="img-fluid bor_r_15" alt="100%x280" src="./img/team.jpeg"/>
+                                                <img class="img-fluid bor_r_15" alt="100%x280" src="./img/aboutUs/mine.png"/>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="">
@@ -202,7 +202,7 @@
                                         <div class="row">
 
                                             <div class="col-md-6 mb-3">
-                                                <img class="img-fluid bor_r_15" alt="100%x280" src="./img/team.jpeg"/>
+                                                <img class="img-fluid bor_r_15" alt="100%x280" src="./img/aboutUs/11.png"/>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="">
@@ -231,7 +231,7 @@
                                         <div class="row">
 
                                             <div class="col-md-6 mb-3">
-                                                <img class="img-fluid bor_r_15" alt="100%x280" src="./img/team.jpeg"/>
+                                                <img class="img-fluid bor_r_15" alt="100%x280" src="./img/aboutUs/22.png"/>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="">
@@ -350,14 +350,14 @@
     </section>
 </main>
 <!-- Footer -->
-<footer class="page-footer font-small bg-white">
+<div class="bg-white">
     <!--contact-->
     <section id="contact" class="py-5">
-        <div class="container px-5" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
+        <div class="px-5" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
             <!--form-->
             <div class="card cardForm">
                 <div class="card-body">
-                    <form>
+                    <form action="https://formspree.io/f/mgebvrpk" method="POST" target="_blank">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="formHeading">
                             Свяжитесь с нами
@@ -366,14 +366,14 @@
                             <div class="col">
                                 <div class="form-outline">
                                     <label class="form-label" for="form6Example1">Имя</label>
-                                    <input type="text" id="form6Example1" class="form-control" placeholder="Арсен Сарсенович"/>
+                                    <input type="text" id="form6Example1" name="Name" class="form-control" placeholder="Арсен Сарсенович" required/>
                                 </div>
                             </div>
                             <div class="col">
                                 <!-- Text input -->
                                 <div class="form-outline">
                                     <label class="form-label" for="form6Example3">Компания</label>
-                                    <input type="text" id="form6Example3" class="form-control" placeholder="Антошка"/>
+                                    <input type="text" id="form6Example3" name="Company" class="form-control" placeholder="Антошка"/>
                                 </div>
                             </div>
                         </div>
@@ -381,21 +381,21 @@
                             <div class="col">
                                 <div class="form-outline">
                                     <label class="form-label" for="phoneNumber">Номер телефона</label>
-                                    <input type="number" id="phoneNumber" class="form-control" placeholder="+7 707 982 01-99" />
+                                    <input type="number" id="phoneNumber" name="Phone Number" class="form-control" placeholder="8 747 810 59-50" required/>
                                 </div>
                             </div>
                             <div class="col">
                                 <!-- Text input -->
                                 <div class="form-outline">
                                     <label class="form-label" for="emailAddress">E-mail</label>
-                                    <input type="email" id="emailAddress" class="form-control" placeholder="info@familystore.kz"/>
+                                    <input type="email" id="emailAddress" name="Email" class="form-control" placeholder="info@familystore.kz" required />
                                 </div>
                             </div>
                         </div>
                         <!-- Message input -->
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="form6Example7">Текст</label>
-                            <textarea class="form-control" id="form6Example7" rows="4" placeholder="Добрый день!"></textarea>
+                            <label class="form-label" for="form6Example7">Сообщение</label>
+                            <textarea class="form-control" id="form6Example7" name="Message" rows="4" placeholder="Добрый день!"></textarea>
                         </div>
 
                         <!-- Submit button -->
@@ -414,10 +414,10 @@
                     <a class="nav__item" href="./about-us.html">О нас</a>
                 </li>
                 <li>
-                    <a class="nav__item" href="#">Бренды</a>
+                    <a class="nav__item" href="./reviews.html">Обзоры</a>
                 </li>
                 <li>
-                    <a class="nav__item" href="#">FAQ</a>
+                    <a class="nav__item" href="./faq.html">Вопросы</a>
                 </li>
                 <li>
                     <a class="nav__item" href="./сontact.html">Контакты</a>
@@ -427,45 +427,40 @@
     </section>
     <!--/contact-->
     <div style="background: url('./img/footer.svg'); height: 545px;">
-        <div class="animation_social_media" style="padding-top: 300px;">
-            <a href="https://www.youtube.com/"
-               target="_blank" rel="nofollow" class="social-blob bottom__blob social-blob_1 bottom__blob_1 m-2"
-               data-v-6c466415="" data-v-1dfc1ef0="">
-                <span class="social-blob__wrapper" data-v-6c466415="">
-                    <img alt="Social link" data-v-6c466415="" class="lazyLoad isLoaded" src="./img/icons/youtube.svg"/>
+        <div class="animation_social_media" style="margin: 0 auto; max-width: 600px; position: relative;left: 80px;">
+            <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 300px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/insta.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://www.youtube.com/"
-               target="_blank" rel="nofollow" class="social-blob bottom__blob social-blob_1 bottom__blob_1 m-2"
-               data-v-6c466415="" data-v-1dfc1ef0="">
-                <span class="social-blob__wrapper" data-v-6c466415="">
-                    <img alt="Social link" data-v-6c466415="" class="lazyLoad isLoaded" src="./img/icons/facebook.svg"/>
+            <a href="https://facebook.com/familystore.kz" target="_blank" style="position: absolute; left: 100px; top: 340px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/facebook.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/facebook.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://www.youtube.com/"
-               target="_blank" rel="nofollow" class="social-blob bottom__blob social-blob_1 bottom__blob_1 m-2"
-               data-v-6c466415="" data-v-1dfc1ef0="">
-                <span class="social-blob__wrapper" data-v-6c466415="">
-                    <img alt="Social link" data-v-6c466415="" class="lazyLoad isLoaded" src="./img/icons/instagram.png.svg"/>
+            <a href="https://www.youtube.com/" target="_blank" style="position: absolute; left: 20px; top: 400px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/youtube.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/youtube.svg" alt=""/>
+                </span>
+            </a>
+            <a href="https://t.me/familystorekz" target="_blank" style="position: absolute;left: 190px;top: 400px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/telegram.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/telegram.svg" alt=""/>
+                </span>
+            </a>
+            <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" target="_blank" style="position: absolute; left:190px;top: 300px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/kaspi.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/kaspi.png" class="img-fluid" width="50" height="50" alt=""/>
+                </span>
+            </a>
+            <a href="https://wa.me/77478105950/" target="_blank" style="position: absolute; left: 280px; top: 340px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/whatsapp.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/whatsapp.png" class="img-fluid" width="50" height="50" alt=""/>
                 </span>
             </a>
         </div>
-        <!--<div class="container-fluid footerCopyright">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 underFooter">
-                    © 2023 Copyright:
-                    Family store. Все права защищены
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <a href="#" class="underFooter">Crazy about toys</a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <a href="#" class="underFooter">Terms and conditions</a>
-                </div>
-            </div>
-        </div>-->
     </div>
-</footer>
+</div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="js/popper.min.js"></script>
