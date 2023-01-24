@@ -4,7 +4,7 @@ html body {
 
 #reviews {
     background: url("../img/reviews.png") no-repeat;
-    height: 160vh;
+
 }
 
 .picture {
@@ -27,7 +27,7 @@ html body {
 }
 
 #stock {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -381,7 +381,7 @@ marquee {
     background-image: url("../img/news.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 175vh;
+    min-height: 175vh;
 }
 
 .newsImg {
@@ -444,6 +444,7 @@ marquee {
 .hitem {
     flex-shrink: 0;
     width: 100%;
+    height: 100%;
     padding: 10px;
     text-align: center;
     font-style: normal;
@@ -656,42 +657,50 @@ tabs*/
 
 
 
-
-/*@media (min-width: 576px) {
-    body {
-        background: purple;
+@media (max-width: 576px) {
+    .hitem {
+        font-size: 36px;
     }
-    #crazyCompany {
-        display: none;
+    .mainPageTitle {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 576px) {
+    .hitem {
+        font-size: 36px;
+    }
+    .mainPageTitle {
+        font-size: 36px;
     }
 }
 
 
 @media (min-width: 768px) {
-    body {
-        background: blue;
+    .hitem {
+        font-size: 56px;
     }
-    #crazyCompany {
-        display: none;
+    .mainPageTitle {
+        font-size: 56px;
     }
 }
 
 
 @media (min-width: 992px) {
-    body {
-        background: green;
+    .hitem {
+        font-size: 76px;
     }
-    #crazyCompany {
-        display: none;
+    .mainPageTitle {
+        font-size: 56px;
     }
 }
 
 
 @media (min-width: 1200px) {
-    body {
-        background: red;
+    .mainPageTitle {
+        font-size: 66px;
     }
-}*/
+}
 
 /*NAVBAR*/
 .dropdown {
