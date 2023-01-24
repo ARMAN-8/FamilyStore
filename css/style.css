@@ -655,9 +655,8 @@ tabs*/
 }
 
 
-/*
 
-!*!/ Small devices (landscape phones, 576px and up)*!
+/*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
     body {
         background: purple;
@@ -667,7 +666,7 @@ tabs*/
     }
 }
 
-!*!/ Medium devices (tablets, 768px and up)*!
+/*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
     body {
         background: blue;
@@ -677,7 +676,7 @@ tabs*/
     }
 }
 
-!*!/ Large devices (desktops, 992px and up)*!
+/*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
     body {
         background: green;
@@ -687,9 +686,31 @@ tabs*/
     }
 }
 
-!*!/ Extra large devices (large desktops, 1200px and up)*!
+/*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
     body {
         background: red;
     }
-}*/
+}
+
+/*NAVBAR*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    border-radius: 8px;
+    position: absolute;
+    background-color: #ffffff;
+    color: #0d0d0d;
+    min-width: 165px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

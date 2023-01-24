@@ -28,16 +28,17 @@
         <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
     </a>
 </div>
-<header style="background: #bebebe;">
+<header>
     <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg z-depth-0 mx-lg-4" style="height: 112px;">
+    <nav class="mb-1 navbar navbar-expand-lg z-depth-0 NAVBAR">
         <a class="navbar-brand ownMenu font-weight-bold" href="./index.html">
-            <img src="/img/newLogo.pdf" width="130px" height="auto" alt="Main logo"/>
+            <img src="/img/newLogo.pdf" width="130px" height="auto" alt="Main logo"/> <br>
+            <span style="color: white; font-size: 10px; position: absolute; margin-top: -50px; color: #0d0d0d;">мы знаем что нужно детям</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
                 aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
-                <i class="fas fa-align-right topText"></i>
+                <i class="fas fa-bars"></i>
             </span>
         </button>
         <div class="collapse navbar-collapse ownMenu" id="navbarSupportedContent-333">
@@ -45,51 +46,36 @@
                 <li class="nav-item malibuBtn mx-lg-5" style="border-radius: 32px;">
                     <a class="nav-link ownMenu" href="./catalog.html"><b>Каталог</b></a>
                 </li>
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenu" href="./about-us.html"><b>О нас</b></a>
+
+                <li class="dropdown nav-item mx-lg-2">
+                    <span class="nav-link ownMenuDark" style="font-weight: 800;">Компания <i class="fas fa-chevron-down" style="font-size: 10px;"></i></span>
+                    <div class="dropdown-content">
+                        <div class="my-2">
+                            <a href="./about-us.html" class="nav-link ownMenuDark" style="font-weight: 800;">О нас</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Новости</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Акции</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="./become-a-partner.html" class="nav-link ownMenuDark" style="font-weight: 800;">Стать партнером</a>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenu" href="#" onclick="slowScroll('#contact')"><b>Стать партнером</b></a>
+                    <a class="nav-link ownMenuDark" href="./faq.html"><b>Вопросы</b></a>
                 </li>
                 <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenu" href="./faq.html"><b>Вопросы</b></a>
-                </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link ownMenu" href="#">Pricing</a>
-                </li>-->
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenu" href="./сontact.html"><b>Контакты</b></a>
+                    <a class="nav-link ownMenuDark" href="./сontact.html"><b>Контакты</b></a>
                 </li>
                 <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenu" href="tel:+77478105950">
+                    <a class="nav-link ownMenuDark" href="tel:+77478105950">
                         <i class="fas fa-phone text-success"></i>
                     </a>
                 </li>
             </ul>
-            <!--<ul class="navbar-nav ml-auto nav-flex-icons">
-                <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light topText" href="https://www.instagram.com/degdarr/"
-                       target="_blank" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light topText" href="" target="_blank" title="Telegram">
-                        <i class="fas fa-paper-plane"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light topText" target="_blank" title="Whatsapp"
-                       href="https://wa.me/+77079820199?text=Қайырлы+күн%2C+менің+қояр+сұрағым+">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light topText" href="tel:+77079820199">
-                        <i class="fas fa-phone green-text animated pulse infinite mr-3"></i>
-                    </a>
-                </li>
-            </ul>-->
         </div>
     </nav>
     <!--/.Navbar -->
