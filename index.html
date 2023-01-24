@@ -5,22 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>FamilyStore</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/logo_transparent.png" type="image/x-icon">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
     <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css"/>
     <!-- Yourcustom styles (optional) -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"/>
     <!--AoS animate-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <!--WoW, and animate.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            border-radius: 8px;
+            position: absolute;
+            background-color: #ffffff;
+            color: #0d0d0d;
+            min-width: 165px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 <div class="whatsappIcon">
@@ -32,7 +52,8 @@
     <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg z-depth-0 mx-lg-4" style="height: 112px;">
         <a class="navbar-brand ownMenu font-weight-bold" href="./index.html">
-            <img src="/img/newLogo.pdf" width="130px" height="auto" alt="Main logo"/>
+            <img src="/img/newLogo.pdf" width="130px" height="auto" alt="Main logo"/> <br>
+            <span style="color: white; font-size: 10px; position: absolute; margin-top: -50px;">мы знаем что нужно детям</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
                 aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,11 +66,23 @@
                 <li class="nav-item malibuBtn mx-lg-5" style="border-radius: 32px;">
                     <a class="nav-link ownMenu" href="./catalog.html"><b>Каталог</b></a>
                 </li>
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenu" href="./about-us.html"><b>О нас</b></a>
-                </li>
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenu" href="./become-a-partner.html"><b>Стать партнером</b></a>
+
+                <li class="dropdown nav-item mx-lg-2">
+                    <span class="nav-link ownMenu" style="font-weight: 800;">Компания <i class="fas fa-chevron-down" style="font-size: 10px;"></i></span>
+                    <div class="dropdown-content">
+                        <div class="my-2">
+                            <a href="#" class="nav-link ownMenuDark" style="font-weight: 800;">О нас</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="#" class="nav-link ownMenuDark" style="font-weight: 800;">Новости</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="#" class="nav-link ownMenuDark" style="font-weight: 800;">Акции</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="./become-a-partner.html" class="nav-link ownMenuDark" style="font-weight: 800;">Стать партнером</a>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item mx-lg-2">
                     <a class="nav-link ownMenu" href="./faq.html"><b>Вопросы</b></a>
@@ -558,23 +591,47 @@
             <!---->
             <section class="pt-5 pb-5">
                 <div class="container-fluid">
-                    <h2 class="h1-responsive font-weight-bold my-5">Наши партнеры</h2>
+                    <h2 class="h1-responsive font-weight-bold my-5 wow zoomInLeft">Наши партнеры</h2>
                     <div class="row">
-                        <div class="col-lg-6 col-md-3 col-sm-12">
-                            <div class="card bor_r_15">
-                                <img class="img-fluid" src="./img/partners.png" style=""/>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card bor_r_15 my-2 text-center">
+                                <img class="img-fluid" src="./img/partners/1.pdf"/>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12">
-                            <div class="card z-depth-0">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card bor_r_15 my-2 text-center">
+                                <img class="img-fluid" src="./img/partners/3-wilbeerries.png"/>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card bor_r_15 my-2 text-center">
+                                <img class="img-fluid" src="./img/partners/4-halyk-bank.svg"/>
+                                <img class="img-fluid" src="./img/partners/2-kaspi-bank.svg"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card bor_r_15 my-2 text-center">
+                                <img class="img-fluid" src="./img/partners/5-jusan.png"/>
+                            </div>
+                        </div>
+
+                        <!--<div class="col-lg-6 col-md-12 col-sm-12 wow fadeInLeft">
+                            <div class="card bor_r_15 my-2 text-center">
+                                <img class="img-fluid" src="./img/partners/1.pdf" style="width: 300px;"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 wow fadeInRight">
+                            <div class="card z-depth-0 my-2">
+                                <img class="img-fluid" alt="100%x280" src="./img/partners/3-wilbeerries.png"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 wow fadeInRight">
+                            <div class="card z-depth-0 my-2">
                                 <img class="img-fluid" alt="100%x280" src="./img/partners.png"/>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12">
-                            <div class="card z-depth-0">
-                                <img class="img-fluid" alt="100%x280" src="./img/partners.png"/>
-                            </div>
-                        </div>
+                        </div>-->
                     </div>
                     <!--<div class="row">
                         <div class="col-6">
@@ -663,8 +720,8 @@
                 </div>
             </section>
             <!---->
-            <div class="text-center my-5">
-                <a class="primary-btn py-2 text-white" href="./сontact.html">
+            <div class="text-center my-5 wow fadeInDownBig">
+                <a class="primary-btn py-2 text-white mt-5" href="./сontact.html" style="z-index: 10;">
                     Стать партнёром
                 </a>
             </div>

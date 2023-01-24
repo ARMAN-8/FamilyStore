@@ -653,3 +653,43 @@ tabs*/
 .text-successS {
     color: #027DFA;
 }
+
+
+/*
+
+!*!/ Small devices (landscape phones, 576px and up)*!
+@media (min-width: 576px) {
+    body {
+        background: purple;
+    }
+    #crazyCompany {
+        display: none;
+    }
+}
+
+!*!/ Medium devices (tablets, 768px and up)*!
+@media (min-width: 768px) {
+    body {
+        background: blue;
+    }
+    #crazyCompany {
+        display: none;
+    }
+}
+
+!*!/ Large devices (desktops, 992px and up)*!
+@media (min-width: 992px) {
+    body {
+        background: green;
+    }
+    #crazyCompany {
+        display: none;
+    }
+}
+
+!*!/ Extra large devices (large desktops, 1200px and up)*!
+@media (min-width: 1200px) {
+    body {
+        background: red;
+    }
+}*/
