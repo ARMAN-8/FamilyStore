@@ -656,8 +656,8 @@ tabs*/
 
 
 
-/*// Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
+
+/*@media (min-width: 576px) {
     body {
         background: purple;
     }
@@ -666,7 +666,7 @@ tabs*/
     }
 }
 
-/*// Medium devices (tablets, 768px and up)*/
+
 @media (min-width: 768px) {
     body {
         background: blue;
@@ -676,7 +676,7 @@ tabs*/
     }
 }
 
-/*// Large devices (desktops, 992px and up)*/
+
 @media (min-width: 992px) {
     body {
         background: green;
@@ -686,12 +686,12 @@ tabs*/
     }
 }
 
-/*// Extra large devices (large desktops, 1200px and up)*/
+
 @media (min-width: 1200px) {
     body {
         background: red;
     }
-}
+}*/
 
 /*NAVBAR*/
 .dropdown {
