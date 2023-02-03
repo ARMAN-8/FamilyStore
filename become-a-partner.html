@@ -22,12 +22,99 @@
     <!--WoW, and animate.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 50px;
+            background: transparent;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        header .logo {
+            color: #fff;
+            height: 100px;
+            line-height: 50px;
+            font-size: 24px;
+            float: left;
+            font-weight: bold;
+        }
+        header nav {
+            float: right;
+        }
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        header nav ul li {
+            list-style: none;
+        }
+        header nav ul li a {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+        header nav ul li a:hover {
+            color: #9e9e9e;
+        }
+        .menu-toggle {
+            color: #fff;
+            float: right;
+            line-height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+        .nav-link {
+            font-weight: 800;
+        }
+        @media (max-width: 991px) {
+            header {
+                padding: 20px 20px;
+                background: #027DFA;
+                text-align: center;
+                z-index: 10;
+            }
+
+            .catalog {
+                margin-bottom: 30px;
+                display: inline-block;
+                /*left: 0;*/
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            header nav {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 100px);
+                background: #027DFA;
+                top: 100px;
+                right: -100%;
+                transition: 0.5s;
+            }
+
+            header nav.active {
+                right: 0;
+            }
+
+            header nav ul {
+                display: inline-block;
+                text-align: center;
+                padding: 50px 200px;
+            }
+        }
         /*NAVBAR*/
         .dropdown {
             position: relative;
-            display: inline-block;
+            display: block;
         }
-
         .dropdown-content {
             display: none;
             border-radius: 8px;
@@ -39,7 +126,6 @@
             padding: 12px 16px;
             z-index: 1;
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
@@ -52,59 +138,53 @@
     </a>
 </div>
 <header>
-    <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg z-depth-0 NAVBAR">
-        <a class="navbar-brand ownMenu font-weight-bold" href="./index.html">
-            <img src="/img/newLogo.pdf" width="130px" height="auto" alt="Main logo"/> <br>
-            <span style="color: white; font-size: 10px; position: absolute; margin-top: -50px; color: #0d0d0d;">мы знаем что нужно детям</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
-                aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-                <i class="fas fa-bars"></i>
-            </span>
-        </button>
-        <div class="collapse navbar-collapse ownMenu" id="navbarSupportedContent-333">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item malibuBtn mx-lg-5" style="border-radius: 32px;">
-                    <a class="nav-link ownMenu" href="./catalog.html"><b>Каталог</b></a>
-                </li>
+    <div class="logo">
+        <a href="./index.html"><img width="130" height="" class="img-fluid" src="./img/newLogo.pdf" alt=""/></a>
+    </div>
+    <nav class="active">
+        <ul>
+            <li class="catalog" style="border-radius: 32px;background: white;">
+                <a href="./catalog.html" class="nav-link" style="color: #027DFA">Каталог</a>
+            </li>
 
-                <li class="dropdown nav-item mx-lg-2">
-                    <span class="nav-link ownMenuDark" style="font-weight: 800;">Компания <i class="fas fa-chevron-down" style="font-size: 10px;"></i></span>
-                    <div class="dropdown-content">
-                        <div class="my-2">
-                            <a href="./about-us.html" class="nav-link ownMenuDark" style="font-weight: 800;">О нас</a>
-                        </div>
-                        <div class="my-2">
-                            <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Новости</a>
-                        </div>
-                        <div class="my-2">
-                            <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Акции</a>
-                        </div>
-                        <div class="my-2">
-                            <a href="./become-a-partner.html" class="nav-link ownMenuDark" style="font-weight: 800;">Стать партнером</a>
-                        </div>
+
+
+            <li class="dropdown nav-item mx-lg-2" style="margin-top: 10px;">
+                <span class="nav-link ownMenuDark" style="font-weight: 800;">Компания <i class="fas fa-chevron-down pl-2" style="font-size: 10px;"></i></span>
+                <div class="dropdown-content">
+                    <div class="my-2">
+                        <a href="./about-us.html" class="nav-link ownMenuDark" style="font-weight: 800;">О нас</a>
                     </div>
-                </li>
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenuDark" href="./faq.html"><b>Вопросы</b></a>
-                </li>
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenuDark" href="./сontact.html"><b>Контакты</b></a>
-                </li>
-                <li class="nav-item mx-lg-2">
-                    <a class="nav-link ownMenuDark" href="tel:+77478105950">
-                        <i class="fas fa-phone text-success"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+                    <div class="my-2">
+                        <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Новости</a>
+                    </div>
+                    <div class="my-2">
+                        <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Акции</a>
+                    </div>
+                    <div class="my-2">
+                        <a href="./become-a-partner.html" class="nav-link ownMenuDark" style="font-weight: 800;">Стать партнером</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="./faq.html" class="nav-link ownMenuDark">Вопросы</a>
+            </li>
+            <li class="nav-item">
+                <a href="./сontact.html" class="nav-link ownMenuDark">Контакты</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" href="tel:+77478105950" class="nav-link ownMenuDark"><i class="fas fa-phone text-success"></i></a>
+            </li>
+        </ul>
     </nav>
-    <!--/.Navbar -->
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
 </header>
 <main>
-    <section id="aboutUs" class="py-5" style="background-image: url('./img/bap.png'); height: 100vh;">
+    <section id="aboutUs" class="py-5 my-5" style="background-image: url('./img/bap.png'); height: 100vh;">
         <div class="container-fluid px-lg-5">
             <h2 class="h1-responsive font-weight-bold my-5 animate__animated animate__fadeInLeft">Игрушки оптом</h2>
             <div class="row">
@@ -386,6 +466,11 @@
 <script src="js/script.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript">
+    $(document).ready(function () {
+        $('.menu-toggle').click(function () {
+            $('nav').toggleClass('active');
+        })
+    });
     AOS.init({
         duration: 1200,
     })
