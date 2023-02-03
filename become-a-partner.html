@@ -236,8 +236,10 @@
             <h5>1 - Оставьте заявку на партнерство.</h5>
             <h5>2 - Сделайте заказ или закажите звонок менеджера на сайте для согласования деталей.</h5>
             <h5>3 - Мы собираем и отправляем Ваш заказ</h5>
+        </div>
+        <div class="container">
             <div class="text-center my-4">
-                <img src="./img/kazakhstan.svg" alt="">
+                <img class="img-fluid" src="./img/map.svg" alt="Kazakhstan map"/>
             </div>
         </div>
     </section>
@@ -245,11 +247,11 @@
 <div class="bg-white">
     <!--contact-->
     <section id="contact" class="py-5">
-        <div class="px-5" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
+        <div class="px-lg-5" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
             <!--form-->
-            <div class="card cardForm">
+            <div class="card cardForm wow zoomInUp">
                 <div class="card-body">
-                    <form>
+                    <form action="https://formspree.io/f/xlekgbrw" method="POST" target="_blank">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="formHeading">
                             Свяжитесь с нами
@@ -258,14 +260,14 @@
                             <div class="col">
                                 <div class="form-outline">
                                     <label class="form-label" for="form6Example1">Имя</label>
-                                    <input type="text" id="form6Example1" class="form-control" placeholder="Арсен Сарсенович"/>
+                                    <input type="text" id="form6Example1" name="Name" class="form-control" placeholder="Арсен Сарсенович" required/>
                                 </div>
                             </div>
                             <div class="col">
                                 <!-- Text input -->
                                 <div class="form-outline">
                                     <label class="form-label" for="form6Example3">Компания</label>
-                                    <input type="text" id="form6Example3" class="form-control" placeholder="Family store"/>
+                                    <input type="text" id="form6Example3" name="Company" class="form-control" placeholder="Family store"/>
                                 </div>
                             </div>
                         </div>
@@ -273,21 +275,38 @@
                             <div class="col">
                                 <div class="form-outline">
                                     <label class="form-label" for="phoneNumber">Номер телефона</label>
-                                    <input type="number" id="phoneNumber" class="form-control" placeholder="+7 747 810 59-50"/>
+                                    <input type="number" id="phoneNumber" name="Phone Number" class="form-control" placeholder="8 747 810 59-50" required/>
                                 </div>
                             </div>
                             <div class="col">
                                 <!-- Text input -->
                                 <div class="form-outline">
                                     <label class="form-label" for="emailAddress">E-mail</label>
-                                    <input type="email" id="emailAddress" class="form-control" placeholder="info@familystore.kz"/>
+                                    <input type="email" id="emailAddress" name="Email" class="form-control" placeholder="info@familystore.kz" required />
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div>
+                                <label class="form-label" for="emailAddress">Тема</label>
+                            </div>
+                            <div class="select" name="Тема">
+                                <select>
+                                    <option value="1" selected>Какую компанию Вы представляете?</option>
+                                    <option value="2">Магазин детских товаров</option>
+                                    <option value="3">Магазин детских товаров</option>
+                                    <option value="4">Интернет магазин</option>
+                                    <option value="5">Специализированный магазин игрушек</option>
+                                    <option value="6">Магазин бытовой техники</option>
+                                    <option value="7">Островок</option>
+                                    <option value="8">Другое</option>
+                                </select>
                             </div>
                         </div>
                         <!-- Message input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form6Example7">Сообщение</label>
-                            <textarea class="form-control" id="form6Example7" rows="4" placeholder="Добрый день!"></textarea>
+                            <textarea class="form-control" id="form6Example7" name="Message" rows="4" placeholder="Добрый день!"></textarea>
                         </div>
 
                         <!-- Submit button -->
@@ -298,7 +317,7 @@
                 </div>
             </div>
             <!--/form-->
-            <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3" style="list-style: none; background: red;">
+            <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none;">
                 <li>
                     <a class="nav__item" href="./catalog.html">Каталог</a>
                 </li>
@@ -319,7 +338,7 @@
     </section>
     <!--/contact-->
     <div style="background: url('./img/footer.svg'); height: 545px;">
-        <div class="animation_social_media" style="margin: 0 auto; max-width: 600px; position: relative;left: 80px;">
+        <div class="animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;left: 80px;">
             <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/insta.svg" alt=""/>
