@@ -22,21 +22,18 @@
   <!--WoW, and animate.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
-    body {
-      background: #027DFA;
-    }
     header {
       position: absolute;
       top: 0;
       left: 0;
-      padding: 20px 50px;
+      padding: 20px 10px;
       background: transparent;
       width: 100%;
       box-sizing: border-box;
     }
     header .logo {
       color: #fff;
-      height: 100px;
+      height: 70px;
       line-height: 50px;
       font-size: 24px;
       float: left;
@@ -77,8 +74,8 @@
     }
     @media (max-width: 991px) {
       header {
-        padding: 20px 20px;
-        background: #027DFA;
+        padding: 20px 10px;
+        background: transparent;
         text-align: center;
         z-index: 10;
       }
@@ -91,20 +88,23 @@
 
       .menu-toggle {
         display: block;
+        z-index: 50;
       }
 
       header nav {
         position: absolute;
         width: 100%;
-        height: calc(100vh - 100px);
-        background: #027DFA;
-        top: 100px;
-        right: -100%;
+        height: 100vh;
+        top: 0;
+        padding-top: 80px;
+        background: #fff;
+        left: 0;
         transition: 0.5s;
+        z-index: -10;
       }
 
       header nav.active {
-        right: 0;
+        left: 100%;
       }
 
       header nav ul {
@@ -142,18 +142,15 @@
 </div>
 <header>
   <div class="logo">
-    <a href="./index.html"><img width="130" height="" class="img-fluid" src="./img/newLogoDark.png" alt=""/></a>
+    <a href="./index.html"><img width="130" height="" class="img-fluid" src="./img/blueLogo.png" alt=""/></a>
   </div>
   <nav class="active">
     <ul>
-      <li class="catalog" style="border-radius: 32px;background: white;">
-        <a href="./catalog.html" class="nav-link" style="color: #027DFA">Каталог</a>
+      <li class="catalog" style="border-radius: 32px;background: #027DFA;">
+        <a href="./catalog.html" class="nav-link">Каталог</a>
       </li>
-
-
-
       <li class="dropdown nav-item mx-lg-2" style="margin-top: 10px;">
-        <span class="nav-link ownMenu" style="font-weight: 800;">Компания <i class="fas fa-chevron-down pl-2" style="font-size: 10px;"></i></span>
+        <span class="nav-link ownMenuDark" style="font-weight: 800;">Компания <i class="fas fa-chevron-down pl-2" style="font-size: 10px;"></i></span>
         <div class="dropdown-content">
           <div class="my-2">
             <a href="./about-us.html" class="nav-link ownMenuDark" style="font-weight: 800;">О нас</a>
@@ -169,21 +166,19 @@
           </div>
         </div>
       </li>
-
-
       <li class="nav-item">
-        <a href="./faq.html" class="nav-link ownMenu">Вопросы</a>
+        <a href="./faq.html" class="nav-link ownMenuDark">Вопросы</a>
       </li>
       <li class="nav-item">
-        <a href="./сontact.html" class="nav-link ownMenu">Контакты</a>
+        <a href="./сontact.html" class="nav-link ownMenuDark">Контакты</a>
       </li>
       <li class="nav-item">
-        <a href="#" href="tel:+77478105950" class="nav-link ownMenu"><i class="fas fa-phone text-success"></i></a>
+        <a href="#" href="tel:+77478105950" class="nav-link ownMenuDark"><i class="fas fa-phone text-success"></i></a>
       </li>
     </ul>
   </nav>
   <div class="menu-toggle">
-    <i class="fas fa-bars"></i>
+    <i class="fas fa-bars text-dark"></i>
   </div>
 </header>
 <main>
