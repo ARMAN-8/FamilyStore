@@ -660,6 +660,9 @@ tabs*/
     .hitem {
         font-size: 36px;
     }
+    .hitem2 {
+        font-size: 36px;
+    }
     .mainPageTitle {
         font-size: 36px;
     }
@@ -667,6 +670,9 @@ tabs*/
 
 @media (min-width: 576px) {
     .hitem {
+        font-size: 36px;
+    }
+    .hitem2 {
         font-size: 36px;
     }
     .mainPageTitle {
@@ -679,6 +685,9 @@ tabs*/
     .hitem {
         font-size: 56px;
     }
+    .hitem2 {
+        font-size: 56px;
+    }
     .mainPageTitle {
         font-size: 56px;
     }
@@ -687,6 +696,9 @@ tabs*/
 
 @media (min-width: 992px) {
     .hitem {
+        font-size: 76px;
+    }
+    .hitem2 {
         font-size: 76px;
     }
     .mainPageTitle {
