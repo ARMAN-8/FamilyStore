@@ -666,6 +666,9 @@ tabs*/
     .mainPageTitle {
         font-size: 36px;
     }
+    .animeSocialMedia {
+        left: 20px;
+    }
 }
 
 @media (min-width: 576px) {
@@ -677,6 +680,9 @@ tabs*/
     }
     .mainPageTitle {
         font-size: 36px;
+    }
+    .animeSocialMedia {
+        left: 50px;
     }
 }
 
@@ -691,6 +697,9 @@ tabs*/
     .mainPageTitle {
         font-size: 56px;
     }
+    .animeSocialMedia {
+        left: 60px;
+    }
 }
 
 
@@ -704,12 +713,18 @@ tabs*/
     .mainPageTitle {
         font-size: 56px;
     }
+    .animeSocialMedia {
+        left: 70px;
+    }
 }
 
 
 @media (min-width: 1200px) {
     .mainPageTitle {
         font-size: 66px;
+    }
+    .animeSocialMedia {
+        left: 80px;
     }
 }
 

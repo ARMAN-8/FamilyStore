@@ -390,7 +390,7 @@
   </section>
   <!--/contact-->
   <div style="background: url('./img/footer.svg'); height: 545px;">
-    <div class="animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;left: 80px;">
+    <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;">
       <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/insta.svg" alt=""/>
@@ -431,45 +431,7 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
-<!--AoS animate-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-0JFB0WXMJS"></script>-->
 <script src="js/script.js"></script>
 <!-- Your custom scripts (optional) -->
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('.menu-toggle').click(function () {
-      $('nav').toggleClass('active');
-    })
-  });
-  AOS.init({
-    duration: 1200,
-  })
-  new WOW().init();
-
-  /*slowScroll*/
-  function slowScroll(id) {
-    var offset = 0;
-    $('html,body').animate({
-      scrollTop: $(id).offset().top - offset
-    }, 500);
-    return false;
-  }
-
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-
-  gtag('js', new Date());
-
-  gtag('config', 'G-0JFB0WXMJS');
-</script>
-<noscript>
-  <div><img src="https://mc.yandex.ru/watch/64824181" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
 </body>
 </html>
