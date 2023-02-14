@@ -813,3 +813,9 @@ select::-ms-expand {
     pointer-events: none;
 }
 
+.container-fluid {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0 48px
+}
