@@ -669,6 +669,9 @@ tabs*/
     .animeSocialMedia {
         left: 10px;
     }
+    .mobileHidden {
+        display: none;
+    }
 }
 
 @media (min-width: 576px) {
@@ -683,6 +686,9 @@ tabs*/
     }
     .animeSocialMedia {
         left: 50px;
+    }
+    .mobileHidden {
+        display: none;
     }
 }
 
@@ -700,6 +706,9 @@ tabs*/
     .animeSocialMedia {
         left: 60px;
     }
+    .mobileHidden {
+        display: block;
+    }
 }
 
 
@@ -716,6 +725,9 @@ tabs*/
     .animeSocialMedia {
         left: 70px;
     }
+    .mobileHidden {
+        display: block;
+    }
 }
 
 
@@ -725,6 +737,9 @@ tabs*/
     }
     .animeSocialMedia {
         left: 80px;
+    }
+    .mobileHidden {
+        display: block;
     }
 }
 
