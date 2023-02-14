@@ -667,7 +667,7 @@ tabs*/
         font-size: 36px;
     }
     .animeSocialMedia {
-        left: 10px;
+        left: 0;
     }
     .mobileHidden {
         display: none;
@@ -685,7 +685,7 @@ tabs*/
         font-size: 36px;
     }
     .animeSocialMedia {
-        left: 50px;
+        left: 20px;
     }
     .mobileHidden {
         display: none;
