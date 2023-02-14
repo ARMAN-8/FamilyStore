@@ -817,5 +817,5 @@ select::-ms-expand {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    padding:0 48px
+    padding:0 12px;
 }
