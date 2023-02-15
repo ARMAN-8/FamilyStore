@@ -672,6 +672,9 @@ tabs*/
     .mobileHidden {
         display: none;
     }
+    .mh80 {
+        height: 30px!important;
+    }
 }
 
 @media (min-width: 576px) {
@@ -689,6 +692,9 @@ tabs*/
     }
     .mobileHidden {
         display: none;
+    }
+    .mh80 {
+        height: 30px!important;
     }
 }
 
@@ -709,6 +715,9 @@ tabs*/
     .mobileHidden {
         display: block;
     }
+    .mh80 {
+        height: 90px!important;
+    }
 }
 
 
@@ -728,6 +737,9 @@ tabs*/
     .mobileHidden {
         display: block;
     }
+    .mh80 {
+        height: 80px!important;
+    }
 }
 
 
@@ -740,6 +752,9 @@ tabs*/
     }
     .mobileHidden {
         display: block;
+    }
+    .mh80 {
+        height: 100px!important;
     }
 }
 
