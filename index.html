@@ -76,9 +76,8 @@
                 background: transparent;
                 text-align: center;
                 z-index: 10;
-                overflow: hidden;
+                overflow-y: hidden;
                 height: 100vh;
-                position: fixed;
             }
 
             .catalog {
@@ -93,7 +92,6 @@
             }
 
             header nav {
-                position: absolute;
                 width: 100%;
                 height: 100vh;
                 top: 0;
@@ -103,6 +101,7 @@
                 transition: 0.5s;
                 z-index: -10;
                 overflow-y: hidden;
+                position: fixed;
             }
 
             header nav.active {
@@ -239,10 +238,10 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6 mb-3 flash d-flex justify-content-center align-items-center animate__animated animate__fadeInBottom">
                             <a href="./brand.html"
                                style="position: relative; display: flex; justify-content: center; align-content: center;">
-                                <h1 style="position:absolute;z-index: 10; color: #0d0d0d; font-weight: 900;">Ещё
+                                <h1 style="position:absolute; color: #0d0d0d; font-weight: 900;">Ещё
                                     <br/> больше
                                 </h1>
-                                <img class="img-fluid" src="./img/ironman.png" alt="" style="position:relative; width: 150px; height: 150px;"/>
+                                <img class="img-fluid" src="./img/ironman.png" alt="" style="width: 150px; height: 150px;"/>
                                 <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1088 700" width="1088" height="700"
                                      preserveAspectRatio="xMidYMid meet"
                                      style="position:relative;;width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs>
