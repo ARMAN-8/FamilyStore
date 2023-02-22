@@ -66,14 +66,14 @@
         }
 
         header {
-             position: absolute;
-             top: 0;
-             left: 0;
-             padding: 20px 10px;
-             background: transparent;
-             width: 100%;
-             box-sizing: border-box;
-         }
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 10px;
+            background: transparent;
+            width: 100%;
+            box-sizing: border-box;
+        }
         header .logo {
             color: #fff;
             height: 70px;
@@ -121,6 +121,9 @@
                 background: transparent;
                 text-align: center;
                 z-index: 10;
+                overflow-y: hidden;
+                height: 100vh;
+                position: fixed;
             }
 
             .catalog {
@@ -135,7 +138,6 @@
             }
 
             header nav {
-                position: absolute;
                 width: 100%;
                 height: 100vh;
                 top: 0;
@@ -144,6 +146,8 @@
                 left: 0;
                 transition: 0.5s;
                 z-index: -10;
+                overflow-y: hidden;
+                position: fixed;
             }
 
             header nav.active {
@@ -153,7 +157,7 @@
             header nav ul {
                 display: inline-block;
                 text-align: center;
-                padding: 50px 200px;
+                overflow-y: hidden;
             }
         }
         /*NAVBAR*/
@@ -179,50 +183,52 @@
 </head>
 <body>
 <header>
-    <div class="logo">
-        <a href="./index.html"><img width="130" height="" class="img-fluid" src="./img/blueLogo.png" alt=""/></a>
-    </div>
-    <nav class="active">
-        <ul>
-            <li class="catalog" style="border-radius: 32px;background: #027DFA;">
-                <a href="./catalog.html" class="nav-link">Каталог</a>
-            </li>
-            <li class="dropdown nav-item mx-lg-2" style="margin-top: 10px;">
-                <span class="nav-link ownMenuDark" style="font-weight: 800;">Компания <i class="fas fa-chevron-down pl-2" style="font-size: 10px;"></i></span>
-                <div class="dropdown-content">
-                    <div class="my-2">
-                        <a href="./about-us.html" class="nav-link ownMenuDark" style="font-weight: 800;">О нас</a>
+    <div class="container-fluid">
+        <div class="logo">
+            <a href="./index.html"><img width="130" height="" class="img-fluid" src="./img/blueLogo.png" alt=""/></a>
+        </div>
+        <nav class="active">
+            <ul>
+                <li class="catalog" style="border-radius: 32px;background: #027DFA;">
+                    <a href="./catalog.html" class="nav-link">Каталог</a>
+                </li>
+                <li class="dropdown nav-item mx-lg-2" style="margin-top: 10px;">
+                    <span class="nav-link ownMenuDark" style="font-weight: 800;">Компания <i class="fas fa-chevron-down pl-2" style="font-size: 10px;"></i></span>
+                    <div class="dropdown-content">
+                        <div class="my-2">
+                            <a href="./about-us.html" class="nav-link ownMenuDark" style="font-weight: 800;">О нас</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Новости</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Акции</a>
+                        </div>
+                        <div class="my-2">
+                            <a href="./become-a-partner.html" class="nav-link ownMenuDark" style="font-weight: 800;">Стать партнером</a>
+                        </div>
                     </div>
-                    <div class="my-2">
-                        <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Новости</a>
-                    </div>
-                    <div class="my-2">
-                        <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Акции</a>
-                    </div>
-                    <div class="my-2">
-                        <a href="./become-a-partner.html" class="nav-link ownMenuDark" style="font-weight: 800;">Стать партнером</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a href="./faq.html" class="nav-link ownMenuDark">Вопросы</a>
-            </li>
-            <li class="nav-item">
-                <a href="./сontact.html" class="nav-link ownMenuDark">Контакты</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" href="tel:+77478105950" class="nav-link ownMenuDark"><i class="fas fa-phone text-success"></i></a>
-            </li>
-        </ul>
-    </nav>
-    <div class="menu-toggle">
-        <i class="fas fa-bars text-dark"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="./faq.html" class="nav-link ownMenuDark">Вопросы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./сontact.html" class="nav-link ownMenuDark">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" href="tel:+77478105950" class="nav-link ownMenuDark"><i class="fas fa-phone text-success"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars text-dark"></i>
+        </div>
     </div>
 </header>
 <main>
     <section id="aboutUs" class="py-5" style="background: url('./img/catalog.png') no-repeat;">
         <div class="container-fluid px-lg-5">
-            <h2 class="h1-responsive font-weight-bold my-5 text-white">Каталог</h2>
+            <h2 class="h1-responsive font-weight-bold my-5 text-black">Каталог</h2>
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12">
                     <!-- Control buttons -->
@@ -1028,7 +1034,7 @@
 <div class="bg-white">
     <!--contact-->
     <section id="contact" class="py-5">
-        <div class="px-lg-5" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
+        <div class="px-lg-5 px-2" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
             <!--form-->
             <div class="card cardForm wow zoomInUp">
                 <div class="card-body">
@@ -1118,8 +1124,8 @@
         </div>
     </section>
     <!--/contact-->
-    <div style="background: url('./img/footer.svg'); height: 545px;">
-        <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;">
+    <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;">
+        <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;left: 50px;">
             <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/insta.svg" alt=""/>
