@@ -99,7 +99,6 @@ html body {
     height: 200px;
     letter-spacing: 1.1px;
     color: #fff;
-    text-transform: uppercase;
     line-height: 1.05;
     opacity: 0;
     transform: translate3d(0,50px,1px);
@@ -116,7 +115,6 @@ html body {
     font-family: Stratos, sans-serif;
     transition-duration: 0.5s, 0.5s;
     transition-property: opacity, transform;
-    text-transform: uppercase;
 }
 .ownMenu{
     font-weight: normal;
