@@ -835,4 +835,5 @@ select::-ms-expand {
 
 body {
     overflow-x: hidden!important;
+    clearfix();
 }
