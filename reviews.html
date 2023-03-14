@@ -131,7 +131,7 @@
       min-width: 165px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       padding: 12px 16px;
-      z-index: 1;
+      z-index: 100;
     }
     .dropdown:hover .dropdown-content {
       display: block;
@@ -271,19 +271,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-6 py-2">
-                  <a href="./reviews.html" style="width: calc(33.33333% - 24px)!important;">
-                    <div class="flash">
-                      <img src="./img/news/2.png" class="newsImg img-fluid picture" alt=""/>
-                    </div>
-                    <div class="newsTitle mt-4 mb-2 mx-lg-4">
-                      Spidey and his Amazing Friends - Черная Пантера
-                    </div>
-                    <div class="newsSubtitle text-black-50 mx-lg-4">
-                      27.01.2023
-                    </div>
-                  </a>
-                </div>
+
               </div>
             </div>
           </div>
@@ -342,34 +330,6 @@
                       <p class="stockCardSubTitle mobileHidden">
                         2-Spidey and his Amazing Friends
                         Наборы Spidey and His Amazing Friends помогут малышу разыграть приключения Спайди.
-                      </p>
-                      <div class="mt-4">
-                        <a href="./reviews.html">Детальнее</a>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-6 col-6 py-4 wow bounceInDown">
-                <a href="./reviews.html">
-                  <div class="card h-100 bor_r_15 flash">
-                    <div class="bg-image hover-overlay ripple picture bor_r_15" data-mdb-ripple-color="light"
-                         style="background-image: url('./img/stock/3.png');height: 300px;">
-                                <span class="badge badge-danger bor_r_15 m-3">
-                                    <i class="fas fa-stock"></i>
-                                    Акция -25%
-                                </span>
-                      <span class="badge badge-light bor_r_15 m-3">
-                                    <i class="fas fa-clock text-primary"></i>
-                                    До 31.05.2023
-                                </span>
-                    </div>
-
-                    <div class="card-body">
-                      <h5 class="stockCardTitle">Радио Управляемая машинка</h5>
-                      <p class="stockCardSubTitle mobileHidden">
-                        3-Rastar Радиоуправляемая Машинка
-                        Машина Rastar Ferrari LaFerrari на радиоуправлении станет прекрасным подарком для мальчика!
                       </p>
                       <div class="mt-4">
                         <a href="./reviews.html">Детальнее</a>
@@ -509,21 +469,6 @@
                   </div>
                 </a>
               </div>
-              <div class="col-lg-3 col-md-6 col-6 py-2">
-                <a href="https://www.youtube.com/watch?v=Ci8a_E0fDjw&ab_channel=SilverlitOfficial" target="_blank" rel="nofollow" class="flash card reviewsFirst cardReview bor_r_15 flash">
-                  <div class="picture firstPct lazyLoad isLoaded" style="background-image: url('./img/reviews/pictures/2.jpg'); height: 200px;">
-                  </div>
-                  <div class="play" data-v-766f66cc="" style="position: absolute;left: 50%;top: 50%;transform: translate(-50%,-90%);z-index: 0;">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-766f66cc=""><circle cx="24" cy="24" r="23.5" stroke="white" data-v-766f66cc=""></circle> <path d="M32.75 22.701C33.75 23.2783 33.75 24.7217 32.75 25.299L20.75 32.2272C19.75 32.8046 18.5 32.0829 18.5 30.9282L18.5 17.0718C18.5 15.9171 19.75 15.1954 20.75 15.7728L32.75 22.701Z" stroke="white" data-v-766f66cc=""></path>
-                    </svg>
-                  </div>
-                  <div class="info first p-4 bor_r_15">
-                    <div class="info_title">
-                      Кукла L.O.L. Surprice Hairvibes 7 серия
-                    </div>
-                  </div>
-                </a>
-              </div>
             </div>
           </div>
         </section>
@@ -535,6 +480,134 @@
     </div>
   </section>
 </main>
+<div class="bg-white">
+  <!--contact-->
+  <section id="contact" class="py-5">
+    <div class="px-lg-5 px-2" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
+      <!--form-->
+      <div class="card cardForm wow zoomInUp">
+        <div class="card-body">
+          <form action="https://formspree.io/f/xlekgbrw" method="POST" target="_blank">
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="formHeading">
+              Свяжитесь с нами
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form6Example1">Имя</label>
+                  <input type="text" id="form6Example1" name="Name" class="form-control" placeholder="Арсен Сарсенович" required/>
+                </div>
+              </div>
+              <div class="col">
+                <!-- Text input -->
+                <div class="form-outline">
+                  <label class="form-label" for="form6Example3">Компания</label>
+                  <input type="text" id="form6Example3" name="Company" class="form-control" placeholder="Family store"/>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="phoneNumber">Номер телефона</label>
+                  <input type="number" id="phoneNumber" name="Phone Number" class="form-control" placeholder="8 747 810 5950" required/>
+                </div>
+              </div>
+              <div class="col">
+                <!-- Text input -->
+                <div class="form-outline">
+                  <label class="form-label" for="emailAddress">E-mail</label>
+                  <input type="email" id="emailAddress" name="Email" class="form-control" placeholder="info@familystore.kz" required />
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div>
+                <label class="form-label" for="emailAddress">Тема</label>
+              </div>
+              <div class="select" name="Тема">
+                <select>
+                  <option value="1" selected>Какую компанию Вы представляете?</option>
+                  <option value="2">Магазин детских товаров</option>
+                  <option value="3">Магазин детских товаров</option>
+                  <option value="4">Интернет магазин</option>
+                  <option value="5">Специализированный магазин игрушек</option>
+                  <option value="6">Магазин бытовой техники</option>
+                  <option value="7">Островок</option>
+                  <option value="8">Другое</option>
+                </select>
+              </div>
+            </div>
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example7">Сообщение</label>
+              <textarea class="form-control" id="form6Example7" name="Message" rows="4" placeholder="Добрый день!"></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <div class="text-center">
+              <button type="submit" class="primary-btn mb-4">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--/form-->
+      <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none;">
+        <li>
+          <a class="nav__item" href="./catalog.html">Каталог</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./about-us.html">О нас</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./reviews.html">Обзоры</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./faq.html">Вопросы</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./сontact.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!--/contact-->
+  <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;padding-left: 100px;">
+    <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;left: 50px;">
+      <a href="https://www.instagram.com/familystore.kz/" class="clearfix" target="_blank" style="position: absolute; top: 300px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/insta.svg" alt=""/>
+                </span>
+      </a>
+      <a href="https://facebook.com/familystore.kz" class="clearfix" target="_blank" style="position: absolute; left: 100px; top: 340px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/facebook.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/facebook.svg" alt=""/>
+                </span>
+      </a>
+      <a href="https://www.youtube.com/" class="clearfix" target="_blank" style="position: absolute; left: 20px; top: 400px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/youtube.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/youtube.svg" alt=""/>
+                </span>
+      </a>
+      <a href="https://t.me/familystorekz" class="clearfix" target="_blank" style="position: absolute;left: 190px;top: 400px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/telegram.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/telegram.svg" alt=""/>
+                </span>
+      </a>
+      <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" class="clearfix" target="_blank" style="position: absolute; left:190px;top: 300px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/kaspi.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/kaspi.png" class="img-fluid" width="50" height="50" alt=""/>
+                </span>
+      </a>
+      <a href="https://wa.me/77478105950/" class="clearfix" target="_blank" class="mobileHidden" style="position: absolute; left: 280px; top: 340px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/whatsapp.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/whatsapp.png" class="img-fluid" width="50" height="50" alt=""/>
+                </span>
+      </a>
+    </div>
+  </div>
+</div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="js/popper.min.js"></script>
