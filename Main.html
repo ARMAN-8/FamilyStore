@@ -20,93 +20,59 @@
     <!--WoW, and animate.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        .header[data-v-0ea75209] {
-            height: 112px;
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 50;
+        }
+
+        .header:before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 50;
-        }
-
-        .hidden-cursor [data-v-0ea75209] {
-            cursor: none !important;
-        }
-
-        .hidden-cursor [data-v-0c4ad1f0] {
-            cursor: none !important;
-        }
-
-        .hidden-cursor * {
-            cursor: none !important;
-        }
-
-        .hidden-cursor * {
-            cursor: none !important;
-        }
-
-        [data-v-0ea75209] {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /*2*/
-        .header__wrapper[data-v-0ea75209] {
-            display: flex;
             height: 100%;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 0;
+            background-color: #b8b8b8;
         }
 
-        .hidden-cursor [data-v-0ea75209] {
-            cursor: none !important;
-        }
-
-        .wrapper[data-v-0ea75209] {
-            max-width: 1440px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 48px;
-        }
-
-        .header__wrapper[data-v-0ea75209] {
+        .header__body {
+            position: relative;
+            z-index: 2;
             display: flex;
-            height: 100%;
-            align-items: center;
             justify-content: space-between;
-            padding-top: 0;
+            height: 80px;
+            align-items: center;
         }
 
-        .hidden-cursor [data-v-0ea75209] {
-            cursor: none !important;
+        .header__logo {}
+        .header__logo img {
+            max-width: 100%;
         }
-
-        .wrapper[data-v-0ea75209] {
-            max-width: 1440px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 48px;
-        }
-
-        .header__wrapper[data-v-0ea75209] {
+        .header__burger {}
+        .header__menu {}
+        .header__list {
             display: flex;
-            height: 100%;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 0;
         }
 
-        .hidden-cursor [data-v-0ea75209] {
-            cursor: none !important;
+        .header__list li {
+            list-style: none;
+            margin: 0 0 0 20px;
         }
 
-        .wrapper[data-v-0ea75209] {
-            max-width: 1440px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 48px;
+        .header__link {
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -118,171 +84,45 @@
     </a>
 </div>
 
-<header class="header" data-v-0ea75209="" data-v-086ec99a="">
-    <div class="wrapper header__wrapper" data-v-0ea75209=""><a href="index.html" aria-current="page"
-                                                               class="logo animate a-opacity a-opacity_logo nuxt-link-exact-active nuxt-link-active"
-                                                               data-v-0ea75209=""><img
-            src="../logo_white.png" width="230" height="96"
-            alt="Игрушки оптом, игрушки опт, купить игрушки оптом Украина"
-            title="Игрушки оптом, игрушки опт, купить игрушки оптом Украина" class="logo__img"
-            data-v-0ea75209=""></a>
-        <div class="header__search animate a-search" data-v-0ea75209="">
-            <div class="search" data-v-6dd14286="" data-v-0ea75209="">
-                <div class="search__icon search__icon_grey" data-v-6dd14286="">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                         xmlns="http://www.w3.org/2000/svg" data-v-6dd14286="">
-                        <path d="M7.91667 2.5C9.35326 2.5 10.731 3.07068 11.7468 4.0865C12.7627 5.10233 13.3333 6.48008 13.3333 7.91667C13.3333 9.25833 12.8417 10.4917 12.0333 11.4417L12.2583 11.6667H12.9167L17.0833 15.8333L15.8333 17.0833L11.6667 12.9167V12.2583L11.4417 12.0333C10.4588 12.8723 9.20892 13.3333 7.91667 13.3333C6.48008 13.3333 5.10233 12.7627 4.0865 11.7468C3.07068 10.731 2.5 9.35326 2.5 7.91667C2.5 6.48008 3.07068 5.10233 4.0865 4.0865C5.10233 3.07068 6.48008 2.5 7.91667 2.5ZM7.91667 4.16667C5.83333 4.16667 4.16667 5.83333 4.16667 7.91667C4.16667 10 5.83333 11.6667 7.91667 11.6667C10 11.6667 11.6667 10 11.6667 7.91667C11.6667 5.83333 10 4.16667 7.91667 4.16667Z"
-                              fill="#1F1F1F" data-v-6dd14286=""></path>
-                    </svg>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <a href="#" class="header__logo">
+                    <img src="#" alt=""/>
+                </a>
+                <div class="header__burger">
+                    <span></span>
                 </div>
-                <div class="search__input" data-v-6dd14286=""><input data-v-6dd14286="">
-                    <div class="search__loader" data-v-6dd14286=""><img
-                            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0ibWFyZ2luOiBhdXRvOyBiYWNrZ3JvdW5kOiBub25lOyBkaXNwbGF5OiBibG9jazsgc2hhcGUtcmVuZGVyaW5nOiBhdXRvOyIgd2lkdGg9IjQxcHgiIGhlaWdodD0iNDFweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj4KPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTU0YmQ2IiBzdHJva2Utd2lkdGg9IjEwIiByPSIzNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTY0LjkzMzYxNDMxMzQ2NDE1IDU2Ljk3Nzg3MTQzNzgyMTM4Ij4KICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGR1cj0iMXMiIHZhbHVlcz0iMCA1MCA1MDszNjAgNTAgNTAiIGtleVRpbWVzPSIwOzEiPjwvYW5pbWF0ZVRyYW5zZm9ybT4KPC9jaXJjbGU+CjwhLS0gW2xkaW9dIGdlbmVyYXRlZCBieSBodHRwczovL2xvYWRpbmcuaW8vIC0tPjwvc3ZnPg=="
-                            data-v-6dd14286=""></div>
-                </div>
-                <div class="search__btn" data-v-6dd14286="">
-                    <button type="submit" class="search__button" data-v-6dd14286="">Искать</button>
-                </div>
-                <div class="search__container" data-v-6dd14286=""><!----></div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="" class="header__link">Home</a>
+                        </li>
+                        <li>
+                            <a href="" class="header__link">About us</a>
+                        </li>
+                        <li>
+                            <a href="" class="header__link">Company</a>
+                        </li>
+                        <li>
+                            <a href="" class="header__link">Team</a>
+                        </li>
+                        <li>
+                            <a href="" class="header__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <a href="catalog/index.html" class="primary-btn header__primary-btn animate a-btn"
-           data-v-0ea75209=""><span data-v-0ea75209="">Каталог</span></a>
-        <nav class="nav" data-v-0ea75209="">
-            <ul class="nav__list" data-v-0ea75209="">
-                <li class="nav__item animate a-opacity a-opacity_1" data-v-0ea75209="">
-                    <div class="company" data-v-ca0eceec="" data-v-0ea75209="">
-                        <div class="company__title" data-v-ca0eceec="">Компания
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg" data-v-ca0eceec="">
-                                <path d="M6.175 7.1499L10 10.9749L13.825 7.1499L15 8.33324L10 13.3332L5 8.33324L6.175 7.1499Z"
-                                      fill="white" data-v-ca0eceec=""></path>
-                            </svg>
-                        </div>
-                        <div aria-hidden="true" hidden="" class="company__mobdropdown" data-v-ca0eceec="">
-                            <div class="company__obj" data-v-ca0eceec=""><a href="about/index.html"
-                                                                            class="company__item"
-                                                                            data-v-ca0eceec="">О нас</a><a
-                                    href="brands/index.html" class="company__item"
-                                    data-v-ca0eceec="">Бренды</a><a href="news/index.html"
-                                                                    class="company__item"
-                                                                    data-v-ca0eceec="">Новости</a><a
-                                    href="promotions/index.html" class="company__item" data-v-ca0eceec="">Акции</a>
-                                <button class="company__item" data-v-ca0eceec="">Стать партнёром</button>
-                            </div>
-                        </div>
-                        <div class="company__dropdown" data-v-ca0eceec=""><a href="about/index.html"
-                                                                             class="company__item"
-                                                                             data-v-ca0eceec="">О нас</a><a
-                                href="brands/index.html" class="company__item" data-v-ca0eceec="">Бренды</a><a
-                                href="news/index.html" class="company__item"
-                                data-v-ca0eceec="">Новости</a><a href="promotions/index.html"
-                                                                 class="company__item" data-v-ca0eceec="">Акции</a>
-                            <button class="company__item" data-v-ca0eceec=""> Стать партнёром</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav__item animate a-opacity a-opacity_2" data-v-0ea75209=""><a
-                        href="faq/index.html" class="nav__link" data-v-0ea75209="">Вопросы</a></li>
-                <li class="nav__item animate a-opacity a-opacity_3" data-v-0ea75209=""><a
-                        href="contacts/index.html" class="nav__link" data-v-0ea75209="">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="controls" data-v-0ea75209="">
-            <div class="langs header__langs animate a-opacity a-opacity_4" data-v-0617b0c2=""
-                 data-v-0ea75209="">
-                <div class="langs__title" data-v-0617b0c2="">ru</div>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                     xmlns="http://www.w3.org/2000/svg" data-v-0617b0c2="">
-                    <path d="M6.175 7.1499L10 10.9749L13.825 7.1499L15 8.33324L10 13.3332L5 8.33324L6.175 7.1499Z"
-                          fill="white" data-v-0617b0c2=""></path>
-                </svg>
-                <div class="langs__dropdown" data-v-0617b0c2="">
-                    <button class="langs__item" data-v-0617b0c2="">UA</button><!---->
-                    <button class="langs__item" data-v-0617b0c2="">EN</button>
-                </div>
-            </div>
-        </div>
-        <button class="btn-menu" data-v-0ea75209="">
-            <div class="btn-menu__blob" data-v-0ea75209="">
-                <svg width="83" height="85" viewBox="0 0 83 85" fill="none"
-                     xmlns="http://www.w3.org/2000/svg" data-v-0ea75209="">
-                    <path d="M8.16351 51.5C-3.32813 37.0534 -10.8364 -8.5 44.1635 -52L120.663 57.5C82.1635 109 25.6636 73.5 8.16351 51.5Z"
-                          fill="$color-purple" data-v-0ea75209=""></path>
-                </svg>
-            </div>
-            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-                 data-v-0ea75209="">
-                <rect width="16" height="2" rx="1" fill="white" data-v-0ea75209=""></rect>
-                <rect y="6" width="16" height="2" rx="1" fill="white" data-v-0ea75209=""></rect>
-                <rect y="12" width="16" height="2" rx="1" fill="white" data-v-0ea75209=""></rect>
-            </svg>
-        </button>
-    </div>
-    <div class="menu menu" data-v-c1b62d9c="" data-v-0ea75209="">
-        <div class="search menu__search" data-v-6dd14286="" data-v-c1b62d9c="">
-            <div class="search__icon" data-v-6dd14286="">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                     xmlns="http://www.w3.org/2000/svg" data-v-6dd14286="">
-                    <path d="M7.91667 2.5C9.35326 2.5 10.731 3.07068 11.7468 4.0865C12.7627 5.10233 13.3333 6.48008 13.3333 7.91667C13.3333 9.25833 12.8417 10.4917 12.0333 11.4417L12.2583 11.6667H12.9167L17.0833 15.8333L15.8333 17.0833L11.6667 12.9167V12.2583L11.4417 12.0333C10.4588 12.8723 9.20892 13.3333 7.91667 13.3333C6.48008 13.3333 5.10233 12.7627 4.0865 11.7468C3.07068 10.731 2.5 9.35326 2.5 7.91667C2.5 6.48008 3.07068 5.10233 4.0865 4.0865C5.10233 3.07068 6.48008 2.5 7.91667 2.5ZM7.91667 4.16667C5.83333 4.16667 4.16667 5.83333 4.16667 7.91667C4.16667 10 5.83333 11.6667 7.91667 11.6667C10 11.6667 11.6667 10 11.6667 7.91667C11.6667 5.83333 10 4.16667 7.91667 4.16667Z"
-                          fill="#1F1F1F" data-v-6dd14286=""></path>
-                </svg>
-            </div>
-            <div class="search__input" data-v-6dd14286=""><input data-v-6dd14286="">
-                <div class="search__loader" data-v-6dd14286=""><img
-                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0ibWFyZ2luOiBhdXRvOyBiYWNrZ3JvdW5kOiBub25lOyBkaXNwbGF5OiBibG9jazsgc2hhcGUtcmVuZGVyaW5nOiBhdXRvOyIgd2lkdGg9IjQxcHgiIGhlaWdodD0iNDFweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj4KPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTU0YmQ2IiBzdHJva2Utd2lkdGg9IjEwIiByPSIzNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTY0LjkzMzYxNDMxMzQ2NDE1IDU2Ljk3Nzg3MTQzNzgyMTM4Ij4KICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGR1cj0iMXMiIHZhbHVlcz0iMCA1MCA1MDszNjAgNTAgNTAiIGtleVRpbWVzPSIwOzEiPjwvYW5pbWF0ZVRyYW5zZm9ybT4KPC9jaXJjbGU+CjwhLS0gW2xkaW9dIGdlbmVyYXRlZCBieSBodHRwczovL2xvYWRpbmcuaW8vIC0tPjwvc3ZnPg=="
-                        data-v-6dd14286=""></div>
-            </div>
-            <div class="search__btn" data-v-6dd14286="">
-                <button type="submit" class="search__button" data-v-6dd14286="">Искать</button>
-            </div>
-            <div class="search__container" data-v-6dd14286=""><!----></div>
-        </div>
-        <div class="menu__catalog" data-v-c1b62d9c=""><a href="catalog/index.html"
-                                                         class="primary-btn menu__primary-btn"
-                                                         data-v-c1b62d9c="">Каталог</a></div>
-        <ul class="menu__list" data-v-c1b62d9c="">
-            <div class="company" data-v-ca0eceec="" data-v-c1b62d9c="">
-                <div class="company__title" data-v-ca0eceec="">Компания
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                         xmlns="http://www.w3.org/2000/svg" data-v-ca0eceec="">
-                        <path d="M6.175 7.1499L10 10.9749L13.825 7.1499L15 8.33324L10 13.3332L5 8.33324L6.175 7.1499Z"
-                              fill="white" data-v-ca0eceec=""></path>
-                    </svg>
-                </div>
-                <div aria-hidden="true" hidden="" class="company__mobdropdown" data-v-ca0eceec="">
-                    <div class="company__obj" data-v-ca0eceec=""><a href="about/index.html"
-                                                                    class="company__item"
-                                                                    data-v-ca0eceec="">О нас</a><a
-                            href="brands/index.html" class="company__item" data-v-ca0eceec="">Бренды</a><a
-                            href="news/index.html" class="company__item" data-v-ca0eceec="">Новости</a><a
-                            href="promotions/index.html" class="company__item" data-v-ca0eceec="">Акции</a>
-                        <button class="company__item" data-v-ca0eceec="">Стать партнёром</button>
-                    </div>
-                </div><!----></div>
-            <li class="menu__item" data-v-c1b62d9c=""><a href="faq/index.html" class="menu__link"
-                                                         data-v-c1b62d9c="">Вопросы</a></li>
-            <li class="menu__item" data-v-c1b62d9c=""><a href="contacts/index.html" class="menu__link"
-                                                         data-v-c1b62d9c="">Контакты</a></li>
-        </ul>
-        <div class="menu__settings" data-v-c1b62d9c="">
-            <div class="langs" data-v-0617b0c2="" data-v-c1b62d9c="">
-                <div class="langs__title" data-v-0617b0c2="">ru</div>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                     xmlns="http://www.w3.org/2000/svg" data-v-0617b0c2="">
-                    <path d="M6.175 7.1499L10 10.9749L13.825 7.1499L15 8.33324L10 13.3332L5 8.33324L6.175 7.1499Z"
-                          fill="white" data-v-0617b0c2=""></path>
-                </svg>
-                <div class="langs__dropdown" data-v-0617b0c2="">
-                    <button class="langs__item" data-v-0617b0c2="">UA</button><!---->
-                    <button class="langs__item" data-v-0617b0c2="">EN</button>
-                </div>
-            </div>
+    </header>
+    <!--content geos here-->
+    <div class="content">
+        <div class="container">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur atque beatae eos, harum ipsum nisi quae quibusdam tempore veritatis?
         </div>
     </div>
-    <div class="black_wrapper" data-v-0ea75209=""></div>
-</header>
-
+</div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
