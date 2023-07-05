@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>FamilyStore</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/logo_transparent.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Yourcustom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!--AoS animate-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--WoW, and animate.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px 10px;
+      background: transparent;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    header .logo {
+      color: #fff;
+      height: 80px;
+      line-height: 50px;
+      font-size: 24px;
+      float: left;
+      font-weight: bold;
+    }
+    header nav {
+      float: right;
+    }
+    header nav ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    header nav ul li {
+      list-style: none;
+    }
+    header nav ul li a {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
+      color: #fff;
+      text-decoration: none;
+      display: block;
+    }
+    header nav ul li a:hover {
+      color: #9e9e9e;
+    }
+    .container-fluid{
+      overflow-x: hidden;      
+    }
+    .menu-toggle {
+      color: #fff;
+      float: right;
+      line-height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+      position: relative;
+    }
+    .menu-toggle i {
+      z-index: 11;
+      position: relative;
+      margin-right: 12px;
+      margin-top: 12px;
+    }
+    .menu-toggle:after{
+      content: '';
+      position: absolute;
+      top: -45px;
+      right: -40px;
+      height: 120px;
+      width: 120px;
+      border-radius: 64% 36% 27% 73%/55% 58% 42% 45%;
+      background: #3166d4;
+      animation: example-data 10s infinite alternate;
+    }
+    .nav-link {
+      font-weight: 800;
+    }
+
+    @keyframes example-data {
+        0% {
+            border-radius: 67% 33% 75% 25%/34% 22% 78% 66%;
+            transform: translateY(-5px)
+        }
+
+        33% {
+            border-radius: 48% 52% 62% 38%/57% 46% 54% 43%
+        }
+
+        66% {
+            border-radius: 24% 76% 45% 55%/54% 77% 23% 46%
+        }
+
+        to {
+            border-radius: 33% 67% 54% 46%/61% 39% 61% 39%;
+            transform: translateY(5px)
+        }
+    }
+
+    @media (max-width: 991px) {
+      header {
+/*        padding: 20px 10px;*/
+        padding: 0;
+        background: transparent;
+        text-align: center;
+        z-index: 100;
+        overflow-y: hidden;
+/*        height: 100vh;*/
+        position: fixed;
+      }
+
+      .catalog {
+        margin-bottom: 30px;
+        display: inline-block;
+        /*left: 0;*/
+      }
+
+      .menu-toggle {
+        display: block;
+        z-index: 50;
+      }
+
+      header nav {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        padding-top: 80px;
+        background: #fff;
+        left: 0;
+        transition: 0.5s;
+        z-index: -10;
+        overflow-y: hidden;
+        position: fixed;
+      }
+
+      header nav.active {
+        left: 100%;
+      }
+
+      header nav ul {
+        display: inline-block;
+        text-align: center;
+        overflow-y: hidden;
+      }
+    }
+    /*NAVBAR*/
+    .dropdown {
+      position: relative;
+      display: block;
+    }
+    .dropdown-content {
+      display: none;
+      border-radius: 8px;
+      position: absolute;
+      background-color: #ffffff;
+      color: #0d0d0d;
+      min-width: 165px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .card{
+     box-shadow: none; 
+     margin-bottom: 16px;
+    }
+    .card-body{
+      padding: 12px 0;
+    }
+    .card-header{
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0 8px;
+      border: 0;
+    }
+    .btn-link--custom{
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      position: relative;  
+      text-decoration: none !important;   
+      display: flex;
+      width: 100%; 
+    }
+    .btn-link--custom:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: url('./img/arrow-down.svg') no-repeat;
+      width: 10px;
+      height: 7px;
+      transition: 0.5s;
+    }
+    .btn-link--custom.collapsed:after{
+      /*content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('./img/arrow-down.svg') no-repeat;
+      width: 10px;
+      height: 7px;*/
+      transform : rotate(180deg);
+    } 
+    @media screen and (max-width: 760px) {
+      .menu-toggle:after {
+          width: 100px;
+          height: 100px;
+          top: -30px;
+          right: -35px
+      }
+    }
+   
+  </style>
+</head>
+<body>
+<div class="whatsappIcon">
+  <a href="https://wa.me/77478105950/" class="animate__animated animate__tada animate__infinite infinite" target="_blank" title="whatsapp icons">
+    <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
+  </a>
+</div>
+<header>
+  <div class="container-fluid">
+    <div class="logo">
+      <a href="/"><img width="130" height="" class="img-fluid" src="./img/blueLogo.png" alt=""/></a>
+    </div>
+    <nav class="active">
+      <ul>
+        <li class="catalog" style="border-radius: 32px;background: #027DFA;">
+          <a href="./catalog.html" class="nav-link">Каталог</a>
+        </li>
+        <li class="dropdown nav-item mx-lg-2" style="margin-top: 10px;">
+          <span class="nav-link ownMenuDark" style="font-weight: 800;">Компания <i class="fas fa-chevron-down pl-2" style="font-size: 10px;"></i></span>
+          <div class="dropdown-content">
+            <div class="my-2">
+              <a href="./about-us.html" class="nav-link ownMenuDark" style="font-weight: 800;">О нас</a>
+            </div>
+            <div class="my-2">
+              <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Новости</a>
+            </div>
+            <div class="my-2">
+              <a href="./reviews.html" class="nav-link ownMenuDark" style="font-weight: 800;">Акции</a>
+            </div>
+            <div class="my-2">
+              <a href="./become-a-partner.html" class="nav-link ownMenuDark" style="font-weight: 800;">Стать партнером</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="./faq.html" class="nav-link ownMenuDark">Вопросы</a>
+        </li>
+        <li class="nav-item">
+          <a href="./сontact.html" class="nav-link ownMenuDark">Контакты</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" href="tel:+77478105950" class="nav-link ownMenuDark"><i class="fas fa-phone text-success"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="fas fa-bars text-white"></i>
+    </div>
+  </div>
+</header>
+<main>
+  <section id="aboutUs" class="py-5">
+    <div class="container-fluid px-lg-5">
+      <h2 class="h1-responsive font-weight-bold my-5 animate__animated animate__fadeInLeft">
+        Часто задаваемые вопросы
+      </h2>
+      <div class="my-5">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Как купить детские игрушки оптом?
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                Чтобы купить детские игрушки оптом, нужно связаться с менеджером.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  C кем мы работаем?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                - с юридическими лицами; <br>
+                - индивидуальными предпринимателями.
+
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Как работает компания Family store?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                Мы являемся розничной и оптовой компанией. <br>
+                Мы работаем с 10.00 до 22.00, без перерыва на обед и без выходных дней.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Почему я не вижу цены?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                Если Вы оптовый покупатель, то Вам, для того чтобы увидеть цены, нужно обращаться нам в ватсап.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Какие скидки я могу получить?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+              <div class="card-body">
+                Вы можете получить скидку в зависимости от объема заказа. <br>
+                Обращайтесь за подробной инфориацией к нашим менеджерам.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Как я могу сделать заказ?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+              <div class="card-body">
+                Вы можете сделать заказ непосредственно через закрепленного за вами менеджера
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heading7">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Как внести изменения в заказ или отменить его?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+              <div class="card-body">
+                Внести изменения в заказе или отменить его Вы можете через закрепленного за вами менеджера
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heading8">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Когда я могу получить заказ?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+              <div class="card-body">
+                По Алматы : Вы можете получить Ваш заказ день в день <br>
+                По регионам: Подготовим Ваши заказы перед отправкой предоставим все фото отчеты
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heading9">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Сколько времени занимает обработка заказа?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+              <div class="card-body">
+                Скорость обработки заказа составляет день в день в зависимости от загрузки склада
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heading10">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Есть ли минимальная сумма заказа?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+              <div class="card-body">
+                Минимальная сумма заказа от 30,000 тенге
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heading11">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Как подписаться на вашу e-mail рассылку?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+              <div class="card-body">
+                Подписаться на информационную рассылку можно на главной странице сайта Familystore.kz
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heading12">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Сколько будет стоить доставка?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+              <div class="card-body">
+                По Алматы: от 30,000 тенге сумма доставки за счет компании <br>По Регионам: за счет партнера
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heading13">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Можно ли заказывать игрушки поштучно?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionExample">
+              <div class="card-body">
+                Да, можно
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heading14">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-link--custom collapsed" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14" style="padding: 0; margin: 0;">
+                  <!-- <i class="fas fa-star mr-2"></i> -->
+                  Как получить фото игрушек Family store?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordionExample">
+              <div class="card-body">
+                Мы уверены, что качественные маркетинговые материалы способствуют повышению узнаваемости бренда и увеличению продаж в ваших торговых точках.
+                <br>
+                Поэтому для наших клиентов доступны следующие материалы: <br>
+                Фотографии всего ассортимента; <br>Логотипы; <br>Описания к игрушкам всего ассортимента; <br>Каталоги;
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- Footer -->
+<div class="bg-white">
+  <!--contact-->
+  <section id="contact" class="py-5">
+    <div class="px-lg-5 px-2" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
+      <!--form-->
+      <div class="card cardForm wow zoomInUp">
+        <div class="card-body">
+          <form action="https://formspree.io/f/xlekgbrw" method="POST" target="_blank">
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="formHeading">
+              Свяжитесь с нами
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form6Example1">Имя</label>
+                  <input type="text" id="form6Example1" name="Name" class="form-control" placeholder="Арсен Сарсенович" required/>
+                </div>
+              </div>
+              <div class="col">
+                <!-- Text input -->
+                <div class="form-outline">
+                  <label class="form-label" for="form6Example3">Компания</label>
+                  <input type="text" id="form6Example3" name="Company" class="form-control" placeholder="Family store"/>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="phoneNumber">Номер телефона</label>
+                  <input type="number" id="phoneNumber" name="Phone Number" class="form-control" placeholder="8 747 810 5950" required/>
+                </div>
+              </div>
+              <div class="col">
+                <!-- Text input -->
+                <div class="form-outline">
+                  <label class="form-label" for="emailAddress">E-mail</label>
+                  <input type="email" id="emailAddress" name="Email" class="form-control" placeholder="info@familystore.kz" required />
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div>
+                <label class="form-label" for="emailAddress">Тема</label>
+              </div>
+              <div class="select" name="Тема">
+                <select>
+                  <option value="1" selected>Какую компанию Вы представляете?</option>
+                  <option value="2">Магазин детских товаров</option>
+                  <option value="3">Магазин детских товаров</option>
+                  <option value="4">Интернет магазин</option>
+                  <option value="5">Специализированный магазин игрушек</option>
+                  <option value="6">Магазин бытовой техники</option>
+                  <option value="7">Островок</option>
+                  <option value="8">Другое</option>
+                </select>
+              </div>
+            </div>
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form6Example7">Сообщение</label>
+              <textarea class="form-control" id="form6Example7" name="Message" rows="4" placeholder="Добрый день!"></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <div class="text-center">
+              <button type="submit" class="primary-btn mb-4">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--/form-->
+      <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none;">
+        <li>
+          <a class="nav__item" href="./catalog.html">Каталог</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./about-us.html">О нас</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./reviews.html">Обзоры</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./faq.html">Вопросы</a>
+        </li>
+        <li>
+          <a class="nav__item" href="./сontact.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!--/contact-->
+  <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;">
+    <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;left: 50px;">
+      <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 300px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/insta.svg" alt=""/>
+                </span>
+      </a>
+      <a href="https://facebook.com/familystore.kz" target="_blank" style="position: absolute; left: 100px; top: 340px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/facebook.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/facebook.svg" alt=""/>
+                </span>
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" style="position: absolute; left: 20px; top: 400px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/youtube.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/youtube.svg" alt=""/>
+                </span>
+      </a>
+      <a href="https://t.me/familystorekz" target="_blank" style="position: absolute;left: 190px;top: 400px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/telegram.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/telegram.svg" alt=""/>
+                </span>
+      </a>
+      <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" target="_blank" style="position: absolute; left:190px;top: 300px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/kaspi.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/kaspi.png" class="img-fluid" width="50" height="50" alt=""/>
+                </span>
+      </a>
+      <a href="https://wa.me/77478105950/" target="_blank" class="mobileHidden" style="position: absolute; left: 280px; top: 340px;">
+                <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/whatsapp.svg');width: 122px; height: 120px;">
+                <img src="./img/icons/whatsapp.png" class="img-fluid" width="50" height="50" alt=""/>
+                </span>
+      </a>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!--AoS animate-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-0JFB0WXMJS"></script>-->
+<script src="js/script.js"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.menu-toggle').click(function () {
+      $('nav').toggleClass('active');
+    })
+  });
+  AOS.init({
+    duration: 1200,
+  })
+  new WOW().init();
+
+  /*slowScroll*/
+  function slowScroll(id) {
+    var offset = 0;
+    $('html,body').animate({
+      scrollTop: $(id).offset().top - offset
+    }, 500);
+    return false;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-0JFB0WXMJS');
+</script>
+<noscript>
+  <div><img src="https://mc.yandex.ru/watch/64824181" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
