@@ -1285,3 +1285,9 @@ img:nth-child(4) {
 img:nth-child(5) {
     animation-delay: 8s;
 }
+
+#crazyCompany {
+    width: 100%; /* Заполнить всю доступную ширину экрана */
+    white-space: nowrap; /* Предотвращение переноса текста на новую строку */
+    overflow: hidden;
+}
