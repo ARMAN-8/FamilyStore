@@ -78,7 +78,7 @@
                 z-index: 10;
                 overflow-y: hidden;
 /*                height: 100vh;*/
-                position: fixed;
+                /*position: fixed;*/
             }
 
             .catalog {
@@ -177,14 +177,33 @@
           width: 10px;
           height: 7px;*/
           transform : rotate(180deg);
-        } 
+        }
+        /*go top*/
+        .go-top {
+            position: fixed; /* фиксированное позиционирование */
+            right: 4%; /* отступ слева 20px */
+            bottom: 4%; /* выравниваем по центру */
+            transform: translateY(-50%); /* выравниваем по центру */
+            -webkit-transform: rotate(45deg);
+            cursor: pointer; /* при наведении меняем курсор */
+            display: none; /* по умолчанию скрываем кнопку */
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            border-radius: 100%;
+            background-color: #027DFA;
+            padding: 12px;
+            z-index: 100;
+        }
+        /* модификатор для отображения кнопки */
+        .go-top--show {
+            display: block;
+        }
     </style>
 </head>
 <body>
-<div class="whatsappIcon">
-    <a href="https://wa.me/77079820199/" target="_blank" title="whatsapp icons">
-        <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
-    </a>
+<div class="go-top">
+    UP
 </div>
 <header>
     <div class="container-fluid">
@@ -276,115 +295,111 @@
                 </div>
             </div>
         </div>
-        <div style="margin-top: 250px;margin-bottom: 250px;">
-            <div class="ticker main__section" data-v-80db454e="">
+        <section id="crazyCompany" class="pt-5">
+            <div class="mt-5">
                 <div class="text-center">
                     <h1 class="h1-responsive font-weight-bold" style="color: #027DFA">Family Store</h1>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="200" class="ticker" data-v-6425134a="" data-v-80db454e="">
-                    <div class="ticker__text ticker__text_reverse" data-v-6425134a="">
-                        <div style="animation-duration:87.05882352941177s;animation-delay:-87.05882352941177s"
-                             data-v-6425134a="">МЫ УМЕЕМ УДИВЛЯТЬ ПРОБУЙ ЧТО-ТО НОВОЕ РАЗВИВАЯСЬ, МЫ ДОСТИГАЕМ ВЫСОТ
-                            КОГДА Я ВОВЛЕЧЕН, Я — КОМАНДА АДАПТИВНОСТЬ — ДАННОСТЬ РЫНКА И НАША КУЛЬТУРА
-                        </div>
-                        <div style="animation-duration:87.05882352941177s;animation-delay:-43.529411764705884s"
-                             data-v-6425134a="">МЫ УМЕЕМ УДИВЛЯТЬ ПРОБУЙ ЧТО-ТО НОВОЕ РАЗВИВАЯСЬ, МЫ ДОСТИГАЕМ ВЫСОТ
-                            КОГДА Я ВОВЛЕЧЕН, Я — КОМАНДА АДАПТИВНОСТЬ — ДАННОСТЬ РЫНКА И НАША КУЛЬТУРА
-                        </div>
-                    </div>
-                    <div class="ticker__text" data-v-6425134a="">
-                        <div style="animation-duration:87.05882352941177s;animation-delay:-87.05882352941177s"
-                             data-v-6425134a="">МЫ УМЕЕМ УДИВЛЯТЬ ПРОБУЙ ЧТО-ТО НОВОЕ РАЗВИВАЯСЬ, МЫ ДОСТИГАЕМ ВЫСОТ
-                            КОГДА Я ВОВЛЕЧЕН, Я — КОМАНДА АДАПТИВНОСТЬ — ДАННОСТЬ РЫНКА И НАША КУЛЬТУРА
-                        </div>
-                        <div style="animation-duration:87.05882352941177s;animation-delay:-43.529411764705884s"
-                             data-v-6425134a="">МЫ УМЕЕМ УДИВЛЯТЬ ПРОБУЙ ЧТО-ТО НОВОЕ РАЗВИВАЯСЬ, МЫ ДОСТИГАЕМ ВЫСОТ
-                            КОГДА Я ВОВЛЕЧЕН, Я — КОМАНДА АДАПТИВНОСТЬ — ДАННОСТЬ РЫНКА И НАША КУЛЬТУРА
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid px-lg-5 my-5">
-            <div class="">
-                <div class="">
-                    <div class="row">
-                        <div class="col-12">
-                            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row">
-
-                                            <div class="col-md-6 mb-3">
-                                                <img class="img-fluid bor_r_15" alt="100%x280" src="./img/about-us/1.png"/>
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <div class="">
-                                                    <div class="aboutUsCarouselTitle">Какие мы?</div>
-                                                    <p class="aboutUsCarouselSubTitle">
-                                                        Мы - переворачиваем рынок игрушек с ног на голову.
-                                                        Мы - воодушевляем неожиданными решениями.
-                                                        Мы - удивляем новизной и яркостью идей. Гарантируем – игрушка в
-                                                        ваших руках не заскучает, клиенту будет комфортно с нами, и даже
-                                                        забавно. Мы гордимся, что вместе с Family store каждый найдет себя,
-                                                        сохранив при этом индивидуальность, и останется немного crazy!
-                                                    </p>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-
-                                            <div class="col-md-6 mb-3">
-                                                <img class="img-fluid bor_r_15" alt="100%x280" src="./img/about-us/2.png"/>
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <div class="">
-                                                    <div class="aboutUsCarouselTitle">Ты наш, если...</div>
-                                                    <p class="aboutUsCarouselSubTitle">
-                                                        Любишь свое дело – это заметно, когда ты кайфуешь от процесса
-                                                        и развиваешь дело компании. Профессионально развиваешься. Ты
-                                                        активный участник наших тренингов, книжного клуба, клуба "feel
-                                                        the rhythm". Делишься с нами новым и актуальным, применяешь
-                                                        полученные знания в работе и развиваешь эмоциональный интеллект.
-                                                        Ты пример для коллег – к твоему мнению прислушиваются,
-                                                        обращаются за профессиональным советом, а может и по личным вопросам.
-                                                        Предлагаешь изменения и участвуешь в них. Замечаешь, что можно изменить
-                                                        и внедряешь. Соглашаешься с решением команды и выполняешь как свое.
-                                                        Доверяешь коллегам и готов качественно выполнять задачи, с которыми
-                                                        лично не согласен. Неудачи компании воспринимаешь, как свои, но не
-                                                        падаешь духом.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-
+                <div class="mt-5">
+                    <div class="ticker main__section" data-v-80db454e="">
+                        <div data-aos="fade-up" data-aos-delay="200" class="ticker" data-v-6425134a="" data-v-80db454e="">
+                            <div class="ticker__text ticker__text_reverse" data-v-6425134a="">
+                                <div style="animation-duration:87.05882352941177s;animation-delay:-87.05882352941177s"
+                                     data-v-6425134a="">МЫ УМЕЕМ УДИВЛЯТЬ ПРОБУЙ ЧТО-ТО НОВОЕ РАЗВИВАЯСЬ, МЫ ДОСТИГАЕМ ВЫСОТ
+                                    КОГДА Я ВОВЛЕЧЕН, Я — КОМАНДА АДАПТИВНОСТЬ — ДАННОСТЬ РЫНКА И НАША КУЛЬТУРА
+                                </div>
+                                <div style="animation-duration:87.05882352941177s;animation-delay:-43.529411764705884s"
+                                     data-v-6425134a="">МЫ УМЕЕМ УДИВЛЯТЬ ПРОБУЙ ЧТО-ТО НОВОЕ РАЗВИВАЯСЬ, МЫ ДОСТИГАЕМ ВЫСОТ
+                                    КОГДА Я ВОВЛЕЧЕН, Я — КОМАНДА АДАПТИВНОСТЬ — ДАННОСТЬ РЫНКА И НАША КУЛЬТУРА
+                                </div>
+                            </div>
+                            <div class="ticker__text" data-v-6425134a="">
+                                <div style="animation-duration:87.05882352941177s;animation-delay:-87.05882352941177s"
+                                     data-v-6425134a="">МЫ УМЕЕМ УДИВЛЯТЬ ПРОБУЙ ЧТО-ТО НОВОЕ РАЗВИВАЯСЬ, МЫ ДОСТИГАЕМ ВЫСОТ
+                                    КОГДА Я ВОВЛЕЧЕН, Я — КОМАНДА АДАПТИВНОСТЬ — ДАННОСТЬ РЫНКА И НАША КУЛЬТУРА
+                                </div>
+                                <div style="animation-duration:87.05882352941177s;animation-delay:-43.529411764705884s"
+                                     data-v-6425134a="">МЫ УМЕЕМ УДИВЛЯТЬ ПРОБУЙ ЧТО-ТО НОВОЕ РАЗВИВАЯСЬ, МЫ ДОСТИГАЕМ ВЫСОТ
+                                    КОГДА Я ВОВЛЕЧЕН, Я — КОМАНДА АДАПТИВНОСТЬ — ДАННОСТЬ РЫНКА И НАША КУЛЬТУРА
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 text-right">
-                            <a class="btn btn-primary carouselPrev mb-3 mr-1 py-4" href="#carouselExampleIndicators2" role="button" data-slide="prev"
-                               style="border-radius: 100%; background: transparent!important; color: black;">
-                                <i class="fa fa-chevron-left"></i>
-                            </a>
-                            <a class="btn btn-primary carouselNext mb-3 py-4" href="#carouselExampleIndicators2" role="button" data-slide="next"
-                               style="border-radius: 100%; background: transparent!important; color: black;">
-                                <i class="fa fa-chevron-right"></i>
-                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid px-lg-5 my-5">
+            <div class="row">
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+
+                                    <div class="col-md-6 mb-3">
+                                        <img class="img-fluid bor_r_15" alt="100%x280" src="./img/about-us/1.png"/>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="">
+                                            <div class="aboutUsCarouselTitle">Какие мы?</div>
+                                            <p class="aboutUsCarouselSubTitle">
+                                                Мы - переворачиваем рынок игрушек с ног на голову.
+                                                Мы - воодушевляем неожиданными решениями.
+                                                Мы - удивляем новизной и яркостью идей. Гарантируем – игрушка в
+                                                ваших руках не заскучает, клиенту будет комфортно с нами, и даже
+                                                забавно. Мы гордимся, что вместе с Family store каждый найдет себя,
+                                                сохранив при этом индивидуальность, и останется немного crazy!
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <img class="img-fluid bor_r_15" alt="100%x280" src="./img/about-us/2.png"/>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="">
+                                            <div class="aboutUsCarouselTitle">Ты наш, если...</div>
+                                            <p class="aboutUsCarouselSubTitle">
+                                                Любишь свое дело – это заметно, когда ты кайфуешь от процесса
+                                                и развиваешь дело компании. Профессионально развиваешься. Ты
+                                                активный участник наших тренингов, книжного клуба, клуба "feel
+                                                the rhythm". Делишься с нами новым и актуальным, применяешь
+                                                полученные знания в работе и развиваешь эмоциональный интеллект.
+                                                Ты пример для коллег – к твоему мнению прислушиваются,
+                                                обращаются за профессиональным советом, а может и по личным вопросам.
+                                                Предлагаешь изменения и участвуешь в них. Замечаешь, что можно изменить
+                                                и внедряешь. Соглашаешься с решением команды и выполняешь как свое.
+                                                Доверяешь коллегам и готов качественно выполнять задачи, с которыми
+                                                лично не согласен. Неудачи компании воспринимаешь, как свои, но не
+                                                падаешь духом.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+                </div>
+                <div class="col-12 text-right">
+                    <a class="btn btn-primary carouselPrev mb-3 mr-1 py-4" href="#carouselExampleIndicators2" role="button" data-slide="prev"
+                       style="border-radius: 100%; background: transparent!important; color: black;">
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                    <a class="btn btn-primary carouselNext mb-3 py-4" href="#carouselExampleIndicators2" role="button" data-slide="next"
+                       style="border-radius: 100%; background: transparent!important; color: black;">
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="container-fluid px-lg-5 my-5">
-
             <!---->
             <div class="accordion" id="accordionExample">
                 <div class="card">
@@ -403,6 +418,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-header" id="headingTwo">
                         <h2 class="mb-0">
@@ -486,96 +502,16 @@
                 </div>
             </div>
             <!---->
-
-            <!--<div>
-                <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="collapse" id="collapse_1">
-                            <div class="auCollapseSubTitle">
-                                Когда впереди длинный путь, нужно не бездумно переть,а уметь довериться коллеге и партнеру, чтобы распределить нагрузку.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <a class="text-primary" data-toggle="collapse" href="#collapse_1" role="button" aria-expanded="false" aria-controls="collapse_1">
-                            <h4 class="auCollapseTitle my-4">Мы умеем удивлять</h4>
-                        </a>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="collapse" id="collapse_2">
-                            <div class="auCollapseSubTitle">
-                                Игрушка, партнерство, или решение. Мы всегда открыты к новым идеям, любим удивлять и доказывать, что нет ничего невозможного.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <a class="text-primary" data-toggle="collapse" href="#collapse_2" role="button" aria-expanded="false" aria-controls="collapse_2">
-                            <h4 class="auCollapseTitle my-4">ПРОБУЙ ЧТО-ТО НОВОЕ</h4>
-                        </a>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="collapse" id="collapse_3">
-                            <div class="auCollapseSubTitle">
-                                В сотрудниках, клиентах и партнерах мы ценим умение двигаться вперед и развиваться. А потом делиться новыми знаниями друг с другом.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <a class="text-primary" data-toggle="collapse" href="#collapse_3" role="button" aria-expanded="false" aria-controls="collapse_3">
-                            <h4 class="auCollapseTitle my-4">РАЗВИВАЯСЬ, МЫ ДОСТИГАЕМ ВЫСОТ</h4>
-                        </a>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="collapse" id="collapse_4">
-                            <div class="auCollapseSubTitle">
-                                Мы за кайф в работе. Полностью отдавать себя делам игрушечным, и вовлекаться в жизнь компании.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <a class="text-primary" data-toggle="collapse" href="#collapse_4" role="button" aria-expanded="false" aria-controls="collapse_4">
-                            <h4 class="auCollapseTitle my-4">КОГДА Я ВОВЛЕЧЕН, Я — КОМАНДА</h4>
-                        </a>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="collapse" id="collapse_5">
-                            <div class="auCollapseSubTitle">
-                                Мы разбираемся в игрушках, понимаем рынок, знаем клиентов. Для нас нет невозможных задач, есть только степень изменений.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <a class="text-primary" data-toggle="collapse" href="#collapse_5" role="button" aria-expanded="false" aria-controls="collapse_5">
-                            <h4 class="auCollapseTitle my-4">АДАПТИВНОСТЬ — ДАННОСТЬ РЫНКА И НАША КУЛЬТУРА</h4>
-                        </a>
-                        <hr>
-                    </div>
-                </div>
-            </div>-->
-
         </div>
     </section>
 </main>
-<!-- Footer -->
 <div class="bg-white">
     <!--contact-->
-    <section id="contact" class="py-5">
-        <div class="px-5" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
+    <section id="contact" class="pb-5">
+        <div class="px-lg-5 px-2" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
             <!--form-->
-            <div class="card cardForm">
-                <div class="card-body">
+            <div class="card cardForm wow zoomInUp">
+                <div class="card-body p-2">
                     <form action="https://formspree.io/f/xlekgbrw" method="POST" target="_blank">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="formHeading">
@@ -611,6 +547,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col mb-4">
+                            <div>
+                                <label class="form-label" for="emailAddress">Тема</label>
+                            </div>
+                            <div class="select" name="Тема">
+                                <select>
+                                    <option value="1" selected>Какую компанию Вы представляете?</option>
+                                    <option value="2">Магазин детских товаров</option>
+                                    <option value="3">Магазин детских товаров</option>
+                                    <option value="4">Интернет магазин</option>
+                                    <option value="5">Специализированный магазин игрушек</option>
+                                    <option value="6">Магазин бытовой техники</option>
+                                    <option value="7">Островок</option>
+                                    <option value="8">Другое</option>
+                                </select>
+                            </div>
+                        </div>
                         <!-- Message input -->
                         <div class="form-outline mb-4">
                             <label class="form-label" for="form6Example7">Сообщение</label>
@@ -625,7 +578,7 @@
                 </div>
             </div>
             <!--/form-->
-            <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3" style="list-style: none; background: red;">
+            <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none; padding-left: 0">
                 <li>
                     <a class="nav__item" href="./catalog.html">Каталог</a>
                 </li>
@@ -645,34 +598,34 @@
         </div>
     </section>
     <!--/contact-->
-    <div style="background: url('./img/footer.svg'); height: 545px;">
-        <div class="animation_social_media" style="margin: 0 auto; max-width: 600px; position: relative;">
-            <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 300px;">
+    <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;/*padding-left: 100px;*/">
+        <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;">
+            <a href="https://www.instagram.com/familystore.kz/" class="clearfix" target="_blank" style="position: absolute; top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/insta.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://facebook.com/familystore.kz" target="_blank" style="position: absolute; left: 100px; top: 340px;">
+            <a href="https://facebook.com/familystore.kz" class="clearfix" target="_blank" style="position: absolute; left: 100px; top: 340px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/facebook.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/facebook.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://www.youtube.com/" target="_blank" style="position: absolute; left: 20px; top: 400px;">
+            <a href="https://www.youtube.com/" class="clearfix" target="_blank" style="position: absolute; left: 20px; top: 400px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/youtube.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/youtube.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://t.me/familystorekz" target="_blank" style="position: absolute;left: 190px;top: 400px;">
+            <a href="https://t.me/familystorekz" class="clearfix" target="_blank" style="position: absolute;left: 190px;top: 400px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/telegram.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/telegram.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" target="_blank" style="position: absolute; left:190px;top: 300px;">
+            <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" class="clearfix" target="_blank" style="position: absolute; left:190px;top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/kaspi.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/kaspi.png" class="img-fluid" width="50" height="50" alt=""/>
                 </span>
             </a>
-            <a href="https://wa.me/77478105950/" target="_blank" class="mobileHidden" style="position: absolute; left: 280px; top: 340px;">
+            <a href="https://wa.me/77478105950/" class="clearfix" target="_blank" class="mobileHidden" style="position: absolute; left: 280px; top: 340px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/whatsapp.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/whatsapp.png" class="img-fluid" width="50" height="50" alt=""/>
                 </span>
@@ -723,9 +676,38 @@
 
     gtag('config', 'G-0JFB0WXMJS');
 </script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/64824181" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
+<script type="text/javascript">
+    // считываем кнопку
+    const goTopBtn = document.querySelector(".go-top");
+
+    // обработчик на скролл окна
+    window.addEventListener("scroll", trackScroll);
+    // обработчик на нажатии
+    goTopBtn.addEventListener("click", goTop);
+
+    function trackScroll() {
+        // вычисляем положение от верхушки страницы
+        const scrolled = window.pageYOffset;
+        // считаем высоту окна браузера
+        const coords = document.documentElement.clientHeight;
+        // если вышли за пределы первого окна
+        if (scrolled > coords) {
+            // кнопка появляется
+            goTopBtn.classList.add("go-top--show");
+        } else {
+            // иначе исчезает
+            goTopBtn.classList.remove("go-top--show");
+        }
+    }
+
+    function goTop() {
+        // пока не вернулись в начало страницы
+        if (window.pageYOffset > 0) {
+            // скроллим наверх
+            window.scrollBy(0, -100); // второй аргумент - скорость
+            setTimeout(goTop, 0); // входим в рекурсию
+        }
+    }
+</script>
 </body>
 </html>

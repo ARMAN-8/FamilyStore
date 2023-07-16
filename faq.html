@@ -33,7 +33,7 @@
     }
     header .logo {
       color: #fff;
-      height: 80px;
+      height: 70px;
       line-height: 50px;
       font-size: 24px;
       float: left;
@@ -61,9 +61,6 @@
     header nav ul li a:hover {
       color: #9e9e9e;
     }
-    .container-fluid{
-      overflow-x: hidden;      
-    }
     .menu-toggle {
       color: #fff;
       float: right;
@@ -71,59 +68,19 @@
       font-size: 24px;
       cursor: pointer;
       display: none;
-      position: relative;
-    }
-    .menu-toggle i {
-      z-index: 11;
-      position: relative;
-      margin-right: 12px;
-      margin-top: 12px;
-    }
-    .menu-toggle:after{
-      content: '';
-      position: absolute;
-      top: -45px;
-      right: -40px;
-      height: 120px;
-      width: 120px;
-      border-radius: 64% 36% 27% 73%/55% 58% 42% 45%;
-      background: #3166d4;
-      animation: example-data 10s infinite alternate;
     }
     .nav-link {
       font-weight: 800;
     }
-
-    @keyframes example-data {
-        0% {
-            border-radius: 67% 33% 75% 25%/34% 22% 78% 66%;
-            transform: translateY(-5px)
-        }
-
-        33% {
-            border-radius: 48% 52% 62% 38%/57% 46% 54% 43%
-        }
-
-        66% {
-            border-radius: 24% 76% 45% 55%/54% 77% 23% 46%
-        }
-
-        to {
-            border-radius: 33% 67% 54% 46%/61% 39% 61% 39%;
-            transform: translateY(5px)
-        }
-    }
-
     @media (max-width: 991px) {
       header {
-/*        padding: 20px 10px;*/
-        padding: 0;
+        padding: 20px 10px;
         background: transparent;
         text-align: center;
-        z-index: 100;
+        z-index: 10;
         overflow-y: hidden;
-/*        height: 100vh;*/
-        position: fixed;
+        /*                height: 100vh;*/
+        /*position: fixed;*/
       }
 
       .catalog {
@@ -180,8 +137,8 @@
       display: block;
     }
     .card{
-     box-shadow: none; 
-     margin-bottom: 16px;
+      box-shadow: none;
+      margin-bottom: 16px;
     }
     .card-body{
       padding: 12px 0;
@@ -196,10 +153,10 @@
       text-align: left;
       padding: 0;
       margin: 0;
-      position: relative;  
-      text-decoration: none !important;   
+      position: relative;
+      text-decoration: none !important;
       display: flex;
-      width: 100%; 
+      width: 100%;
     }
     .btn-link--custom:after{
       content: '';
@@ -222,28 +179,38 @@
       width: 10px;
       height: 7px;*/
       transform : rotate(180deg);
-    } 
-    @media screen and (max-width: 760px) {
-      .menu-toggle:after {
-          width: 100px;
-          height: 100px;
-          top: -30px;
-          right: -35px
-      }
     }
-   
+    /*go top*/
+    .go-top {
+      position: fixed; /* фиксированное позиционирование */
+      right: 4%; /* отступ слева 20px */
+      bottom: 4%; /* выравниваем по центру */
+      transform: translateY(-50%); /* выравниваем по центру */
+      -webkit-transform: rotate(45deg);
+      cursor: pointer; /* при наведении меняем курсор */
+      display: none; /* по умолчанию скрываем кнопку */
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      border-radius: 100%;
+      background-color: #027DFA;
+      padding: 12px;
+      z-index: 100;
+    }
+    /* модификатор для отображения кнопки */
+    .go-top--show {
+      display: block;
+    }
   </style>
 </head>
 <body>
-<div class="whatsappIcon">
-  <a href="https://wa.me/77478105950/" class="animate__animated animate__tada animate__infinite infinite" target="_blank" title="whatsapp icons">
-    <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
-  </a>
+<div class="go-top">
+  UP
 </div>
 <header>
   <div class="container-fluid">
     <div class="logo">
-      <a href="/"><img width="130" height="" class="img-fluid" src="./img/blueLogo.png" alt=""/></a>
+      <a href="./index.html"><img width="130" height="" class="img-fluid" src="./img/blueLogo.png" alt=""/></a>
     </div>
     <nav class="active">
       <ul>
@@ -279,7 +246,7 @@
       </ul>
     </nav>
     <div class="menu-toggle">
-      <i class="fas fa-bars text-white"></i>
+      <i class="fas fa-bars text-dark"></i>
     </div>
   </div>
 </header>
@@ -529,11 +496,11 @@
 <!-- Footer -->
 <div class="bg-white">
   <!--contact-->
-  <section id="contact" class="py-5">
+  <section id="contact" class="pb-5">
     <div class="px-lg-5 px-2" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
       <!--form-->
       <div class="card cardForm wow zoomInUp">
-        <div class="card-body">
+        <div class="card-body p-2">
           <form action="https://formspree.io/f/xlekgbrw" method="POST" target="_blank">
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="formHeading">
@@ -600,7 +567,7 @@
         </div>
       </div>
       <!--/form-->
-      <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none;">
+      <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none; padding-left: 0">
         <li>
           <a class="nav__item" href="./catalog.html">Каталог</a>
         </li>
@@ -620,34 +587,34 @@
     </div>
   </section>
   <!--/contact-->
-  <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;">
-    <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;left: 50px;">
-      <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 300px;">
+  <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;/*padding-left: 100px;*/">
+    <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;">
+      <a href="https://www.instagram.com/familystore.kz/" class="clearfix" target="_blank" style="position: absolute; top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/insta.svg" alt=""/>
                 </span>
       </a>
-      <a href="https://facebook.com/familystore.kz" target="_blank" style="position: absolute; left: 100px; top: 340px;">
+      <a href="https://facebook.com/familystore.kz" class="clearfix" target="_blank" style="position: absolute; left: 100px; top: 340px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/facebook.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/facebook.svg" alt=""/>
                 </span>
       </a>
-      <a href="https://www.youtube.com/" target="_blank" style="position: absolute; left: 20px; top: 400px;">
+      <a href="https://www.youtube.com/" class="clearfix" target="_blank" style="position: absolute; left: 20px; top: 400px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/youtube.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/youtube.svg" alt=""/>
                 </span>
       </a>
-      <a href="https://t.me/familystorekz" target="_blank" style="position: absolute;left: 190px;top: 400px;">
+      <a href="https://t.me/familystorekz" class="clearfix" target="_blank" style="position: absolute;left: 190px;top: 400px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/telegram.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/telegram.svg" alt=""/>
                 </span>
       </a>
-      <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" target="_blank" style="position: absolute; left:190px;top: 300px;">
+      <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" class="clearfix" target="_blank" style="position: absolute; left:190px;top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/kaspi.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/kaspi.png" class="img-fluid" width="50" height="50" alt=""/>
                 </span>
       </a>
-      <a href="https://wa.me/77478105950/" target="_blank" class="mobileHidden" style="position: absolute; left: 280px; top: 340px;">
+      <a href="https://wa.me/77478105950/" class="clearfix" target="_blank" class="mobileHidden" style="position: absolute; left: 280px; top: 340px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/whatsapp.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/whatsapp.png" class="img-fluid" width="50" height="50" alt=""/>
                 </span>
@@ -698,9 +665,38 @@
 
   gtag('config', 'G-0JFB0WXMJS');
 </script>
-<noscript>
-  <div><img src="https://mc.yandex.ru/watch/64824181" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
+<script type="text/javascript">
+  // считываем кнопку
+  const goTopBtn = document.querySelector(".go-top");
+
+  // обработчик на скролл окна
+  window.addEventListener("scroll", trackScroll);
+  // обработчик на нажатии
+  goTopBtn.addEventListener("click", goTop);
+
+  function trackScroll() {
+    // вычисляем положение от верхушки страницы
+    const scrolled = window.pageYOffset;
+    // считаем высоту окна браузера
+    const coords = document.documentElement.clientHeight;
+    // если вышли за пределы первого окна
+    if (scrolled > coords) {
+      // кнопка появляется
+      goTopBtn.classList.add("go-top--show");
+    } else {
+      // иначе исчезает
+      goTopBtn.classList.remove("go-top--show");
+    }
+  }
+
+  function goTop() {
+    // пока не вернулись в начало страницы
+    if (window.pageYOffset > 0) {
+      // скроллим наверх
+      window.scrollBy(0, -100); // второй аргумент - скорость
+      setTimeout(goTop, 0); // входим в рекурсию
+    }
+  }
+</script>
 </body>
 </html>

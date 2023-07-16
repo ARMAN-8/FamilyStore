@@ -26,14 +26,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            padding: 20px 50px;
+            padding: 20px 10px;
             background: transparent;
             width: 100%;
             box-sizing: border-box;
         }
         header .logo {
             color: #fff;
-            height: 100px;
+            height: 70px;
             line-height: 50px;
             font-size: 24px;
             float: left;
@@ -74,10 +74,13 @@
         }
         @media (max-width: 991px) {
             header {
-                padding: 20px 20px;
-                background: #027DFA;
+                padding: 20px 10px;
+                background: transparent;
                 text-align: center;
                 z-index: 10;
+                overflow-y: hidden;
+                /*                height: 100vh;*/
+                /*position: fixed;*/
             }
 
             .catalog {
@@ -88,26 +91,30 @@
 
             .menu-toggle {
                 display: block;
+                z-index: 50;
             }
 
             header nav {
-                position: absolute;
                 width: 100%;
-                height: calc(100vh - 100px);
-                background: #027DFA;
-                top: 100px;
-                right: -100%;
+                height: 100vh;
+                top: 0;
+                padding-top: 80px;
+                background: #fff;
+                left: 0;
                 transition: 0.5s;
+                z-index: -10;
+                overflow-y: hidden;
+                position: fixed;
             }
 
             header nav.active {
-                right: 0;
+                left: 100%;
             }
 
             header nav ul {
                 display: inline-block;
                 text-align: center;
-                padding: 50px 200px;
+                overflow-y: hidden;
             }
         }
         /*NAVBAR*/
@@ -129,27 +136,87 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .card{
+            box-shadow: none;
+            margin-bottom: 16px;
+        }
+        .card-body{
+            padding: 12px 0;
+        }
+        .card-header{
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0 8px;
+            border: 0;
+        }
+        .btn-link--custom{
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            text-decoration: none !important;
+            display: flex;
+            width: 100%;
+        }
+        .btn-link--custom:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: url('./img/arrow-down.svg') no-repeat;
+            width: 10px;
+            height: 7px;
+            transition: 0.5s;
+        }
+        .btn-link--custom.collapsed:after{
+            /*content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url('./img/arrow-down.svg') no-repeat;
+            width: 10px;
+            height: 7px;*/
+            transform : rotate(180deg);
+        }
+        /*go top*/
+        .go-top {
+            position: fixed; /* фиксированное позиционирование */
+            right: 4%; /* отступ слева 20px */
+            bottom: 4%; /* выравниваем по центру */
+            transform: translateY(-50%); /* выравниваем по центру */
+            -webkit-transform: rotate(45deg);
+            cursor: pointer; /* при наведении меняем курсор */
+            display: none; /* по умолчанию скрываем кнопку */
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            border-radius: 100%;
+            background-color: #027DFA;
+            padding: 12px;
+            z-index: 100;
+        }
+        /* модификатор для отображения кнопки */
+        .go-top--show {
+            display: block;
+        }
     </style>
 </head>
 <body>
-<div class="whatsappIcon">
-    <a href="https://wa.me/77478105950/" class="animate__animated animate__tada animate__infinite	infinite" target="_blank" title="whatsapp icons">
-        <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
-    </a>
+<div class="go-top">
+    UP
 </div>
 <header>
     <div class="container-fluid">
         <div class="logo">
-            <a href="./index.html"><img width="130" height="" class="img-fluid" src="./img/newLogo.pdf" alt=""/></a>
+            <a href="./index.html"><img width="130" height="" class="img-fluid" src="./img/blueLogo.png" alt=""/></a>
         </div>
         <nav class="active">
             <ul>
-                <li class="catalog" style="border-radius: 32px;background: white;">
-                    <a href="./catalog.html" class="nav-link" style="color: #027DFA">Каталог</a>
+                <li class="catalog" style="border-radius: 32px;background: #027DFA;">
+                    <a href="./catalog.html" class="nav-link">Каталог</a>
                 </li>
-
-
-
                 <li class="dropdown nav-item mx-lg-2" style="margin-top: 10px;">
                     <span class="nav-link ownMenuDark" style="font-weight: 800;">Компания <i class="fas fa-chevron-down pl-2" style="font-size: 10px;"></i></span>
                     <div class="dropdown-content">
@@ -167,8 +234,6 @@
                         </div>
                     </div>
                 </li>
-
-
                 <li class="nav-item">
                     <a href="./faq.html" class="nav-link ownMenuDark">Вопросы</a>
                 </li>
@@ -181,12 +246,12 @@
             </ul>
         </nav>
         <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars text-dark"></i>
         </div>
     </div>
 </header>
 <main>
-    <section id="aboutUs" class="py-5 my-5" style="background-image: url('./img/bap.png'); height: 100vh;">
+    <section id="aboutUs" class="py-5 my-5" style="background-image: url('./img/bap.png');">
         <div class="container-fluid px-lg-5">
             <h2 class="h1-responsive font-weight-bold my-5 animate__animated animate__fadeInLeft">Игрушки оптом</h2>
             <div class="row">
@@ -214,52 +279,40 @@
         <div class="container-fluid px-lg-5">
             <h2 class="h1-responsive font-weight-bold my-5 animate__animated animate__fadeInLeft">Широкие возможности</h2>
         </div>
-        <div style="background: url('./img/news/4.png') fixed; height: 350px;">
+        <div>
             <div class="container-fluid px-lg-5">
                 <div class="row py-5">
                     <div class="col-lg-3 col-md-6 col-6 text-center">
-                        <div class="card py-3 px-4 bor_r_15">
+                        <div class="card py-3 px-4 bor_r_15 ts-hover mb-2">
                             <i class="fas fa-shopping-cart fa-3x text-successS my-2"></i>
-                            <h3 class="bapTitle mt-2">
+                            <h4 class="bapTitle mt-2">
                                 Интернет <br> магазины
-                            </h3>
+                            </h4>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-6 text-center">
-                        <div class="card py-3 px-4 bor_r_15">
+                        <div class="card py-3 px-4 bor_r_15 ts-hover mb-2">
                             <i class="fas fa-truck fa-3x text-successS my-2"></i>
-                            <h3 class="bapTitle mt-2">
+                            <h4 class="bapTitle mt-2">
                                 Оптовые <br> компании
-                            </h3>
+                            </h4>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-6 text-center">
-                        <div class="card py-3 px-4 bor_r_15">
+                        <div class="card py-3 px-4 bor_r_15 ts-hover mb-2">
                             <i class="fas fa-cart-plus fa-3x text-successS py-2"></i>
-                            <h3 class="bapTitle mt-2">
+                            <h4 class="bapTitle mt-2">
                                 совместные <br> закупки
-                            </h3>
+                            </h4>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-6 text-center">
-                        <div class="card py-3 px-4 bor_r_15">
+                        <div class="card py-3 px-4 bor_r_15 ts-hover mb-2">
                             <i class="fas fa-shopping-basket fa-3x text-successS my-2"></i>
-                            <h3 class="bapTitle mt-2">
+                            <h4 class="bapTitle mt-2">
                                 розничные <br> магазины
-                            </h3>
+                            </h4>
                         </div>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                        <a href="https://wa.me/77478105950/" target="_blank">
-                            <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/whatsapp.svg');width: 122px; height: 120px;">
-                            <img src="./img/icons/whatsapp.png" class="img-fluid" width="50" height="50" alt=""/>
-                            </span>
-                        </a>
-                        <a href="https://t.me/familystorekz" target="_blank">
-                            <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/telegram.svg');width: 122px; height: 120px;">
-                            <img src="./img/icons/telegram.svg" alt=""/>
-                            </span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -328,11 +381,11 @@
 </main>
 <div class="bg-white">
     <!--contact-->
-    <section id="contact" class="py-5">
+    <section id="contact" class="pb-5">
         <div class="px-lg-5 px-2" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
             <!--form-->
             <div class="card cardForm wow zoomInUp">
-                <div class="card-body">
+                <div class="card-body p-2">
                     <form action="https://formspree.io/f/xlekgbrw" method="POST" target="_blank">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="formHeading">
@@ -399,7 +452,7 @@
                 </div>
             </div>
             <!--/form-->
-            <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none;">
+            <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none; padding-left: 0">
                 <li>
                     <a class="nav__item" href="./catalog.html">Каталог</a>
                 </li>
@@ -419,34 +472,34 @@
         </div>
     </section>
     <!--/contact-->
-    <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;">
-        <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;left: 50px;">
-            <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 300px;">
+    <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;/*padding-left: 100px;*/">
+        <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;">
+            <a href="https://www.instagram.com/familystore.kz/" class="clearfix" target="_blank" style="position: absolute; top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/insta.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://facebook.com/familystore.kz" target="_blank" style="position: absolute; left: 100px; top: 340px;">
+            <a href="https://facebook.com/familystore.kz" class="clearfix" target="_blank" style="position: absolute; left: 100px; top: 340px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/facebook.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/facebook.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://www.youtube.com/" target="_blank" style="position: absolute; left: 20px; top: 400px;">
+            <a href="https://www.youtube.com/" class="clearfix" target="_blank" style="position: absolute; left: 20px; top: 400px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/youtube.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/youtube.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://t.me/familystorekz" target="_blank" style="position: absolute;left: 190px;top: 400px;">
+            <a href="https://t.me/familystorekz" class="clearfix" target="_blank" style="position: absolute;left: 190px;top: 400px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/telegram.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/telegram.svg" alt=""/>
                 </span>
             </a>
-            <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" target="_blank" style="position: absolute; left:190px;top: 300px;">
+            <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" class="clearfix" target="_blank" style="position: absolute; left:190px;top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/kaspi.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/kaspi.png" class="img-fluid" width="50" height="50" alt=""/>
                 </span>
             </a>
-            <a href="https://wa.me/77478105950/" target="_blank" class="mobileHidden" style="position: absolute; left: 280px; top: 340px;">
+            <a href="https://wa.me/77478105950/" class="clearfix" target="_blank" class="mobileHidden" style="position: absolute; left: 280px; top: 340px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/whatsapp.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/whatsapp.png" class="img-fluid" width="50" height="50" alt=""/>
                 </span>
@@ -497,9 +550,38 @@
 
     gtag('config', 'G-0JFB0WXMJS');
 </script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/64824181" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
+<script type="text/javascript">
+    // считываем кнопку
+    const goTopBtn = document.querySelector(".go-top");
+
+    // обработчик на скролл окна
+    window.addEventListener("scroll", trackScroll);
+    // обработчик на нажатии
+    goTopBtn.addEventListener("click", goTop);
+
+    function trackScroll() {
+        // вычисляем положение от верхушки страницы
+        const scrolled = window.pageYOffset;
+        // считаем высоту окна браузера
+        const coords = document.documentElement.clientHeight;
+        // если вышли за пределы первого окна
+        if (scrolled > coords) {
+            // кнопка появляется
+            goTopBtn.classList.add("go-top--show");
+        } else {
+            // иначе исчезает
+            goTopBtn.classList.remove("go-top--show");
+        }
+    }
+
+    function goTop() {
+        // пока не вернулись в начало страницы
+        if (window.pageYOffset > 0) {
+            // скроллим наверх
+            window.scrollBy(0, -100); // второй аргумент - скорость
+            setTimeout(goTop, 0); // входим в рекурсию
+        }
+    }
+</script>
 </body>
 </html>

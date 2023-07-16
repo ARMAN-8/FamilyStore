@@ -39,6 +39,8 @@
       font-size: 24px;
       float: left;
       font-weight: bold;
+      position: relative;
+      z-index: 11;
     }
     header nav {
       float: right;
@@ -69,6 +71,9 @@
       font-size: 24px;
       cursor: pointer;
       display: none;
+      position: relative;
+      z-index: 11;
+
     }
     .nav-link {
       font-weight: 800;
@@ -79,9 +84,7 @@
         background: transparent;
         text-align: center;
         z-index: 10;
-        overflow-y: hidden;
         height: 100vh;
-        position: fixed;
       }
 
       .catalog {
@@ -97,14 +100,13 @@
 
       header nav {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         top: 0;
         padding-top: 80px;
         background: #027DFA;
         left: 0;
         transition: 0.5s;
-        z-index: -10;
-        overflow-y: hidden;
+        z-index: 10;
         position: fixed;
       }
 
@@ -115,7 +117,6 @@
       header nav ul {
         display: inline-block;
         text-align: center;
-        overflow-y: hidden;
       }
     }
     /*NAVBAR*/
@@ -137,14 +138,16 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    .container-fluid {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+      padding:0 12px;
+    }
   </style>
 </head>
 <body>
-<div class="whatsappIcon">
-  <a href="https://wa.me/77478105950/" target="_blank" title="whatsapp icons">
-    <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
-  </a>
-</div>
 <header>
   <div class="container-fluid">
     <div class="logo">
@@ -193,183 +196,185 @@
     </div>
   </div>
 </header>
-<section id="mainPage" class="view intro" style="margin-top: 20vh;">
-  <div class="container-fluid mx-lg-5 mx-md-5">
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-6">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 col-sm-12">
-            <div class="mb-5">
-              <div class="contactLabel">
-                E-mail
+<main>
+  <section id="mainPage" class="" style="margin-top: 16vh;">
+    <div class="container-fluid px-lg-3 px-md-3 px-3">
+      <div class="row mb-5"> <!--all row-->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+          <div class="row"> <!--left side info and social media row-->
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="mb-5">
+                <div class="contactLabel">
+                  E-mail
+                </div>
+                <div class="contactSrc">
+                  info@familystore.kz
+                </div>
               </div>
-              <div class="contactSrc">
-                info@familystore.kz
+              <div class="mb-5">
+                <div class="contactLabel">
+                  Телефон:
+                </div>
+                <div class="contactSrc">
+                  +7 747 810 5950
+                </div>
+              </div>
+              <div class="mb-5">
+                <div class="contactLabel">
+                  Адрес:
+                </div>
+                <div class="contactSrc">
+                  г.Алматы, трц Спутник 3 этаж
+                </div>
               </div>
             </div>
-            <div class="mb-5">
-              <div class="contactLabel">
-                Телефон:
-              </div>
-              <div class="contactSrc">
-                +7 747 810 5950
-              </div>
-            </div>
-            <div class="mb-5">
-              <div class="contactLabel">
-                Адрес:
-              </div>
-              <div class="contactSrc">
-                г.Алматы, трц Спутник 3 этаж
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12 col-sm-6 col-6">
-            <div class="animation_social_media d-lg-block d-md-block d-none">
-              <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 100px; left: 100px;">
+            <div class="col-lg-6 col-md-12 col-sm-6 col-6">
+              <div class="animation_social_media d-lg-block d-md-block d-none">
+                <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 100px; left: 100px;">
                   <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
                   <img src="./img/icons/insta.svg" alt=""/>
                   </span>
-              </a>
-              <a href="https://facebook.com/familystore.kz" target="_blank" style="position: absolute;">
+                </a>
+                <a href="https://facebook.com/familystore.kz" target="_blank" style="position: absolute;">
                   <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/facebook.svg');width: 122px; height: 120px;">
                   <img src="./img/icons/facebook.svg" alt=""/>
                   </span>
-              </a>
-              <a href="https://www.youtube.com/" target="_blank" style="position: absolute; left: 30px; top: 350px;">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank" style="position: absolute; left: 30px; top: 350px;">
                   <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/youtube.svg');width: 122px; height: 120px;">
                   <img src="./img/icons/youtube.svg" alt=""/>
                   </span>
-              </a>
-              <a href="https://t.me/familystorekz" target="_blank" style="position: absolute;left: -210px;top: 300px;">
+                </a>
+                <a href="https://t.me/familystorekz" target="_blank" style="position: absolute;left: -210px;top: 300px;">
                   <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/telegram.svg');width: 122px; height: 120px;">
                   <img src="./img/icons/telegram.svg" alt=""/>
                   </span>
-              </a>
-              <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" target="_blank" style="position: absolute; left:150px;top: 250px;">
+                </a>
+                <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" target="_blank" style="position: absolute; left:150px;top: 250px;">
                   <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/kaspi.svg');width: 122px; height: 120px;">
                   <img src="./img/icons/kaspi.png" class="img-fluid" width="50" height="50" alt=""/>
                   </span>
-              </a>
-              <a href="https://wa.me/77478105950/" target="_blank" class="mobileHidden" style="position: absolute; left: -50px; top: 200px;">
+                </a>
+                <a href="https://wa.me/77478105950/" target="_blank" class="mobileHidden" style="position: absolute; left: -50px; top: 200px;">
                   <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/whatsapp.svg');width: 122px; height: 120px;">
                   <img src="./img/icons/whatsapp.png" class="img-fluid" width="50" height="50" alt=""/>
                   </span>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 mb-5">
-        <div class="container px-lg-5" style="max-width: 660px;margin-left: auto;margin-right: auto;">
-          <!--form-->
-          <div class="card cardForm wow zoomInUp">
-            <div class="card-body">
-              <form action="https://formspree.io/f/xlekgbrw" method="POST" target="_blank">
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="formHeading">
-                  Свяжитесь с нами
-                </div>
-                <div class="row mb-4">
-                  <div class="col">
-                    <div class="form-outline">
-                      <label class="form-label" for="form6Example1">Имя</label>
-                      <input type="text" id="form6Example1" name="Name" class="form-control" placeholder="Арсен Сарсенович" required/>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+          <div>
+            <div class="px-lg-5 px-2">
+              <div class="card cardForm wow zoomInUp" style="">
+                <div class="card-body">
+                  <form action="https://formspree.io/f/xlekgbrw" method="POST" target="_blank">
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                    <div class="formHeading">
+                      Свяжитесь с нами
                     </div>
-                  </div>
-                  <div class="col">
-                    <!-- Text input -->
-                    <div class="form-outline">
-                      <label class="form-label" for="form6Example3">Компания</label>
-                      <input type="text" id="form6Example3" name="Company" class="form-control" placeholder="Family store"/>
+                    <div class="row mb-4">
+                      <div class="col">
+                        <div class="form-outline">
+                          <label class="form-label" for="form6Example1">Имя</label>
+                          <input type="text" id="form6Example1" name="Name" class="form-control" placeholder="Арсен Сарсенович" required/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <!-- Text input -->
+                        <div class="form-outline">
+                          <label class="form-label" for="form6Example3">Компания</label>
+                          <input type="text" id="form6Example3" name="Company" class="form-control" placeholder="Family store"/>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="row mb-4">
-                  <div class="col">
-                    <div class="form-outline">
-                      <label class="form-label" for="phoneNumber">Номер телефона</label>
-                      <input type="number" id="phoneNumber" name="Phone Number" class="form-control" placeholder="8 747 810 5950" required/>
+                    <div class="row mb-4">
+                      <div class="col">
+                        <div class="form-outline">
+                          <label class="form-label" for="phoneNumber">Номер телефона</label>
+                          <input type="number" id="phoneNumber" name="Phone Number" class="form-control" placeholder="8 747 810 5950" required/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <!-- Text input -->
+                        <div class="form-outline">
+                          <label class="form-label" for="emailAddress">E-mail</label>
+                          <input type="email" id="emailAddress" name="Email" class="form-control" placeholder="info@familystore.kz" required />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col">
-                    <!-- Text input -->
-                    <div class="form-outline">
-                      <label class="form-label" for="emailAddress">E-mail</label>
-                      <input type="email" id="emailAddress" name="Email" class="form-control" placeholder="info@familystore.kz" required />
+                    <div class="col mb-4">
+                      <div>
+                        <label class="form-label" for="emailAddress">Тема</label>
+                      </div>
+                      <div class="select" name="Тема">
+                        <select>
+                          <option value="1" selected>Какую компанию Вы представляете?</option>
+                          <option value="2">Магазин детских товаров</option>
+                          <option value="3">Магазин детских товаров</option>
+                          <option value="4">Интернет магазин</option>
+                          <option value="5">Специализированный магазин игрушек</option>
+                          <option value="6">Магазин бытовой техники</option>
+                          <option value="7">Островок</option>
+                          <option value="8">Другое</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col mb-4">
-                  <div>
-                    <label class="form-label" for="emailAddress">Тема</label>
-                  </div>
-                  <div class="select" name="Тема">
-                    <select>
-                      <option value="1" selected>Какую компанию Вы представляете?</option>
-                      <option value="2">Магазин детских товаров</option>
-                      <option value="3">Магазин детских товаров</option>
-                      <option value="4">Интернет магазин</option>
-                      <option value="5">Специализированный магазин игрушек</option>
-                      <option value="6">Магазин бытовой техники</option>
-                      <option value="7">Островок</option>
-                      <option value="8">Другое</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- Message input -->
-                <div class="form-outline mb-4">
-                  <label class="form-label" for="form6Example7">Сообщение</label>
-                  <textarea class="form-control" id="form6Example7" name="Message" rows="4" placeholder="Добрый день!"></textarea>
-                </div>
+                    <!-- Message input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form6Example7">Сообщение</label>
+                      <textarea class="form-control" id="form6Example7" name="Message" rows="4" placeholder="Добрый день!"></textarea>
+                    </div>
 
-                <!-- Submit button -->
-                <div class="text-center">
-                  <button type="submit" class="primary-btn mb-4">Отправить</button>
+                    <!-- Submit button -->
+                    <div class="text-center">
+                      <button type="submit" class="primary-btn mb-4">Отправить</button>
+                    </div>
+                  </form>
                 </div>
-              </form>
+              </div>
             </div>
-          </div>
-          <!--/form-->
-          <div class="mobile" style="height: 345px;">
-            <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;">
-              <a href="https://www.instagram.com/familystore.kz/" target="_blank" style="position: absolute; top: 80px;">
+            <div class="d-lg-none d-md-none d-sm-block d-block" style="background: url('./img/footer.svg') no-repeat; background-size: cover;">
+              <div class="animeSocialMedia animation_social_media wow zoomInRight" style="top: 10%;">
+                <a href="https://www.instagram.com/familystore.kz/" class="clearfix" target="_blank" style="position: absolute;left: 230px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/insta.svg" alt=""/>
                 </span>
-              </a>
-              <a href="https://facebook.com/familystore.kz" target="_blank" style="position: absolute; left: 80px;">
+                </a>
+                <a href="https://facebook.com/familystore.kz" class="clearfix" target="_blank" style="position: absolute; left: 50px; margin-top: 90px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/facebook.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/facebook.svg" alt=""/>
                 </span>
-              </a>
-              <a href="https://www.youtube.com/" target="_blank" style="position: absolute; left: 200px;">
+                </a>
+                <a href="https://www.youtube.com/" class="clearfix" target="_blank" style="position: absolute; left: 0;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/youtube.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/youtube.svg" alt=""/>
                 </span>
-              </a>
-              <a href="https://t.me/familystorekz" target="_blank" style="position: absolute;left: 300px;">
+                </a>
+                <a href="https://t.me/familystorekz" class="clearfix" target="_blank" style="position: absolute;left: 120px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/telegram.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/telegram.svg" alt=""/>
                 </span>
-              </a>
-              <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" target="_blank" style="position: absolute; left:120px;top: 100px">
+                </a>
+                <a href="https://kaspi.kz/shop/search/?q=%3AallMerchants%3A4264006&ref=shared_link" class="clearfix" target="_blank" style="position: absolute; left: 170px; margin-top: 90px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/kaspi.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/kaspi.png" class="img-fluid" width="50" height="50" alt=""/>
                 </span>
-              </a>
-              <a href="https://wa.me/77478105950/" target="_blank" class="mobileHidden" style="position: absolute; left: 250px; top: 100px;">
+                </a>
+                <a href="https://wa.me/77478105950/" class="clearfix" target="_blank" class="mobileHidden" style="position: absolute; left: 280px; margin-top: 90px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/whatsapp.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/whatsapp.png" class="img-fluid" width="50" height="50" alt=""/>
                 </span>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="js/popper.min.js"></script>
@@ -414,9 +419,5 @@
 
   gtag('config', 'G-0JFB0WXMJS');
 </script>
-<noscript>
-  <div><img src="https://mc.yandex.ru/watch/64824181" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
 </body>
 </html>

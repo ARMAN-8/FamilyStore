@@ -568,6 +568,10 @@ marquee {
     color: #027DFA;
 }
 
+.ts-hover:hover {
+    color: #4da2ff;
+}
+
 
 
 @media (max-width: 576px) {

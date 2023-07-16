@@ -80,7 +80,7 @@
         z-index: 100;
         overflow-y: hidden;
         height: 100vh;
-        position: fixed;
+        /*position: fixed;*/
       }
 
       .catalog {
@@ -136,13 +136,32 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+    /*go top*/
+    .go-top {
+      position: fixed; /* фиксированное позиционирование */
+      right: 4%; /* отступ слева 20px */
+      bottom: 4%; /* выравниваем по центру */
+      transform: translateY(-50%); /* выравниваем по центру */
+      -webkit-transform: rotate(45deg);
+      cursor: pointer; /* при наведении меняем курсор */
+      display: none; /* по умолчанию скрываем кнопку */
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      border-radius: 100%;
+      background-color: #027DFA;
+      padding: 12px;
+      z-index: 100;
+    }
+    /* модификатор для отображения кнопки */
+    .go-top--show {
+      display: block;
+    }
   </style>
 </head>
 <body>
-<div class="whatsappIcon" style="z-index: 20;">
-  <a href="https://wa.me/77478105950/" target="_blank" title="whatsapp icons">
-    <img src="./img/icons/whatsapp.png" class="img-fluid" alt="whatsapp"/>
-  </a>
+<div class="go-top">
+  UP
 </div>
 <header>
   <div class="container-fluid">
@@ -187,8 +206,8 @@
     </div>
   </div>
 </header>
-<main style="margin-top: 100px;">
-  <section id="aboutUs" class="py-5">
+<main class="mb-5 pb-5">
+  <section id="aboutUs" class="my-5 py-5">
     <div class="">
       <div class="container-fluid px-lg-5">
         <div class="d-flex">
@@ -480,9 +499,9 @@
     </div>
   </section>
 </main>
-<div class="bg-white">
+<div class="bg-white mt-5 pt-5">
   <!--contact-->
-  <section id="contact" class="py-5">
+  <section id="contact" class="pb-5">
     <div class="px-lg-5 px-2" style="max-width: 660px;margin-left: auto;margin-right: auto;margin-bottom: -300px;">
       <!--form-->
       <div class="card cardForm wow zoomInUp">
@@ -553,7 +572,7 @@
         </div>
       </div>
       <!--/form-->
-      <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none;">
+      <ul class="mx-lg-5 mx-md-2 d-flex justify-content-between mt-3 wow zoomInDown" style="list-style: none; padding-left: 0">
         <li>
           <a class="nav__item" href="./catalog.html">Каталог</a>
         </li>
@@ -573,8 +592,8 @@
     </div>
   </section>
   <!--/contact-->
-  <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;padding-left: 100px;">
-    <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;left: 50px;">
+  <div style="background: url('./img/footer.svg') no-repeat; background-size: cover; height: 545px;/*padding-left: 100px;*/">
+    <div class="animeSocialMedia animation_social_media wow zoomInRight" style="margin: 0 auto; max-width: 600px; position: relative;">
       <a href="https://www.instagram.com/familystore.kz/" class="clearfix" target="_blank" style="position: absolute; top: 300px;">
                 <span class="text-center d-flex justify-content-center align-items-center" alt="" style="background-image: url('./img/socialMedia/blobInsta.svg');width: 122px; height: 120px;">
                 <img src="./img/icons/insta.svg" alt=""/>
@@ -650,6 +669,40 @@
   gtag('js', new Date());
 
   gtag('config', 'G-0JFB0WXMJS');
+
+</script>
+<script type="text/javascript">
+  // считываем кнопку
+  const goTopBtn = document.querySelector(".go-top");
+
+  // обработчик на скролл окна
+  window.addEventListener("scroll", trackScroll);
+  // обработчик на нажатии
+  goTopBtn.addEventListener("click", goTop);
+
+  function trackScroll() {
+    // вычисляем положение от верхушки страницы
+    const scrolled = window.pageYOffset;
+    // считаем высоту окна браузера
+    const coords = document.documentElement.clientHeight;
+    // если вышли за пределы первого окна
+    if (scrolled > coords) {
+      // кнопка появляется
+      goTopBtn.classList.add("go-top--show");
+    } else {
+      // иначе исчезает
+      goTopBtn.classList.remove("go-top--show");
+    }
+  }
+
+  function goTop() {
+    // пока не вернулись в начало страницы
+    if (window.pageYOffset > 0) {
+      // скроллим наверх
+      window.scrollBy(0, -100); // второй аргумент - скорость
+      setTimeout(goTop, 0); // входим в рекурсию
+    }
+  }
 </script>
 </body>
 </html>
